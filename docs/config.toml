@@ -19,7 +19,7 @@ default_language = "en"
 
 [markdown]
 [markdown.highlighting]
-theme = "base16-ocean-dark"
+theme = "github-dark"
 
 [extra]
 # Custom variables
