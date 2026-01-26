@@ -1,0 +1,41 @@
+name: "🚀 Feature or Enhancement"
+description: Propose a new feature, UI improvement, or administrative update.
+title: "[FEAT]: "
+labels: ["enhancement", "admin"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the Solana Thailand Genesis system!
+  - type: textarea
+    id: overview
+    attributes:
+      label: Overview
+      description: What are we building or improving?
+      placeholder: e.g. Add a new event template for upcoming seminars.
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why is this change necessary?
+      placeholder: e.g. To provide professional information and countdown for the MU ICT event.
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope of Work
+      options:
+        - label: UI/UX Improvement
+        - label: New Content/Page
+        - label: Project Infrastructure (Git/Templates)
+        - label: Bug Fix
+  - type: textarea
+    id: details
+    attributes:
+      label: Proposed Implementation Details
+      description: Detailed breakdown of the changes.
+      placeholder: |
+        - Create generic event.html template
+        - Add muict-event-2026.md content
+        - Update homepage link
