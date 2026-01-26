@@ -148,6 +148,7 @@ body {
         margin-bottom: 1rem;
         background: linear-gradient(90deg, #fff, var(--solana-purple));
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
@@ -349,6 +350,17 @@ nav {
         color: var(--text-secondary);
         font-size: 0.95rem;
         margin-bottom: 2rem;
+    }
+
+    &.event-highlight {
+        border-color: rgba(20, 241, 149, 0.4);
+        box-shadow: 0 0 30px rgba(20, 241, 149, 0.1);
+        background: linear-gradient(135deg, rgba(20, 241, 149, 0.05) 0%, rgba(255, 255, 255, 0.03) 100%);
+
+        &:hover {
+            border-color: var(--solana-green);
+            box-shadow: 0 0 40px rgba(20, 241, 149, 0.2);
+        }
     }
 }
 
