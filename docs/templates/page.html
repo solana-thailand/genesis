@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="{% if page.extra.layout == 'terminal' %}terminal-block{% else %}glass-card content-card{% endif %}">
+    {{ page.content | safe }}
+</article>
+{% endblock content %}

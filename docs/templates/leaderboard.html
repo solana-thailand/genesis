@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %} Hall of Fame | {{ config.title }}{% endblock title %}
+
+{% block content %}
+
+<div class="page-header">
+    <p>Celebrating the shippable builders who proof their work and lead the evolution of the system.</p>
+</div>
+
+{% set roster = load_data(path="../../data/registry.json") %}
+
+<div class="glass-card" style="padding: 0; overflow: hidden;">
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Builder</th>
+                <th>Reputation</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in roster %}
+            <tr>
+                <td>
+                    {% if user.role == "Owner" %}<span class="badge-crab">Owner</span>
+                    {% elif user.role == "King Crab" %}<span class="badge-crab">King Crab</span>
+                    {% else %}<span class="badge-sword">{{ user.role }}</span>
+                    {% endif %}
+                </td>
+                <td>
+                    <img src="https://github.com/{{ user.github }}.png" class="avatar-github" alt="{{ user.name }}">
+                    <a href="https://github.com/{{ user.github }}" target="_blank" style="font-weight: 600;">{{
+                        user.name }}</a>
+                </td>
+                <td>
+                    <code style="color: var(--solana-purple);">100 XP</code> <!-- Placeholder for now -->
+                </td>
+                <td>
+                    <span class="status-badge active">{{ user.status }}</span>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% if page.content %}
+<div class="terminal-block" style="margin-top: 4rem;">
+    {{ page.content | safe }}
+</div>
+{% endif %}
+
+{% endblock content %}

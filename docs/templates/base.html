@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+  <meta name="description" content="{{ config.description }}">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ config.base_url }}">
+  <meta property="og:title" content="{{ config.title }}">
+  <meta property="og:description" content="{{ config.description }}">
+  <meta property="og:image" content="{{ get_url(path='logo.png') }}">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{ config.base_url }}">
+  <meta property="twitter:title" content="{{ config.title }}">
+  <meta property="twitter:description" content="{{ config.description }}">
+  <meta property="twitter:image" content="{{ get_url(path='logo.png') }}">
+
+  <link rel="stylesheet" href="{{ get_url(path='main.css') }}">
+  <link rel="icon" href="{{ get_url(path='favicon.ico') }}" type="image/png">
+</head>
+
+<body>
+  <nav>
+    <div class="container nav-content">
+      <ul>
+        <li class="brand">
+          <a href="{{ get_url(path="") }}">
+            <img src="{{ get_url(path='logo.png') }}" alt="{{ config.title }}" class="logo" />
+            {{ config.title }}
+          </a>
+        </li>
+      </ul>
+      <ul class="nav-links">
+        <li><a href="{{ get_url(path='rules') }}" {% if current_path=='/rules/' %}class="active" {% endif %}>Rules</a>
+        </li>
+        <li><a href="{{ get_url(path='roadmap') }}" {% if current_path=='/roadmap/' %}class="active" {% endif
+            %}>Roadmap</a></li>
+        <li><a href="{{ get_url(path='quests') }}" {% if current_path=='/quests/' %}class="active" {% endif
+            %}>Quests</a></li>
+        <li><a href="{{ get_url(path='treasury') }}" {% if current_path=='/treasury/' %}class="active" {% endif
+            %}>Treasury</a></li>
+        <li><a href="{{ get_url(path='leaderboard') }}" {% if current_path=='/leaderboard/' %}class="active" {% endif
+            %}>Leaderboard</a></li>
+        <li><a href="https://discord.gg/PGbUgNmsns" target="_blank" class="discord-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+              viewBox="0 0 33.867 33.867">
+              <path
+                d="M11.343 5.177c-1.076 0-4.32 1.316-4.902 1.579S5.213 7.84 4.48 9.195s-1.323 2.939-2.28 5.269-1.179 6.822-1.147 8.193.189 2.442 1.594 3.253c1.404.81 2.646 1.658 3.953 2.168 1.308.51 2.2.877 2.806.367s1.005-1.403 1.005-1.403.574-.797-.51-1.275c-1.084-.479-1.626-.814-1.579-1.308.048-.494.127-.765.398-.701s.91 1.211 3.365 1.737 4.848.447 4.848.447 2.394.08 4.849-.447c2.455-.526 3.093-1.673 3.364-1.737s.35.207.398.7c.048.495-.494.83-1.578 1.309-1.084.478-.51 1.275-.51 1.275s.399.892 1.005 1.403c.605.51 1.498.143 2.805-.367s2.55-1.357 3.954-2.168 1.562-1.882 1.594-3.253c.032-1.37-.191-5.863-1.148-8.193s-1.546-3.914-2.28-5.269c-.732-1.355-1.379-2.176-1.96-2.44-.582-.262-3.827-1.578-4.903-1.578s-1.394.75-1.394.75l-.375.829s-2.52-.479-3.804-.48c-1.284 0-3.837.48-3.837.48l-.375-.83s-.318-.749-1.395-.749m.117 9.948h.04c1.569 0 2.84 1.373 2.84 3.066 0 1.694-1.271 3.066-2.84 3.066s-2.84-1.372-2.84-3.066c-.001-1.677 1.247-3.043 2.8-3.066m10.907 0h.04c1.553.023 2.8 1.39 2.8 3.066 0 1.694-1.271 3.066-2.84 3.066-1.57 0-2.84-1.372-2.84-3.066s1.27-3.066 2.84-3.066">
+              </path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    {% block header %}
+    {# Default header for pages and sections #}
+    {% if page or section %}
+    {% set obj = page | default(value=section) %}
+    {% if not obj.extra.hide_header %}
+    <div class="page-header">
+      <h1>{{ obj.title }}</h1>
+      {% if obj.description %}
+      <p>{{ obj.description }}</p>
+      {% endif %}
+    </div>
+    {% endif %}
+    {% endif %}
+    {% endblock header %}
+
+    {% block content %} {% endblock content %}
+  </main>
+
+  <section class="aurora-section">
+    <div class="aurora-container">
+      <!-- High speed artistic streaks -->
+      <div class="aurora-streak"
+        style="top: 5%; --streak-color: var(--solana-purple); --streak-delay: 0s; --streak-duration: 3s; --streak-opacity: 0.7; --streak-width: 600px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 15%; --streak-color: var(--solana-green); --streak-delay: -1.5s; --streak-duration: 4.5s; --streak-opacity: 0.5; --streak-width: 400px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 25%; --streak-color: var(--solana-blue); --streak-delay: -4s; --streak-duration: 2.5s; --streak-opacity: 0.6; --streak-width: 800px;">
+      </div>
+
+      <!-- Medium speed artistic streaks -->
+      <div class="aurora-streak"
+        style="top: 35%; --streak-color: var(--solana-purple); --streak-delay: -6s; --streak-duration: 7s; --streak-opacity: 0.4; --streak-width: 500px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 45%; --streak-color: var(--solana-green); --streak-delay: -2.3s; --streak-duration: 6s; --streak-opacity: 0.5; --streak-width: 700px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 55%; --streak-color: var(--solana-blue); --streak-delay: -8.5s; --streak-duration: 8.5s; --streak-opacity: 0.4; --streak-width: 650px;">
+      </div>
+
+      <!-- Slower elegant streaks -->
+      <div class="aurora-streak"
+        style="top: 65%; --streak-color: var(--solana-purple); --streak-delay: -11s; --streak-duration: 12s; --streak-opacity: 0.3; --streak-width: 450px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 75%; --streak-color: var(--solana-green); --streak-delay: -4.5s; --streak-duration: 14s; --streak-opacity: 0.4; --streak-width: 550px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 85%; --streak-color: var(--solana-blue); --streak-delay: -1s; --streak-duration: 10s; --streak-opacity: 0.5; --streak-width: 900px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 95%; --streak-color: var(--solana-purple); --streak-delay: -6s; --streak-duration: 16s; --streak-opacity: 0.3; --streak-width: 600px;">
+      </div>
+
+      <!-- Extra layer for density -->
+      <div class="aurora-streak"
+        style="top: 10%; --streak-color: var(--solana-blue); --streak-delay: -13s; --streak-duration: 4s; --streak-opacity: 0.4; --streak-width: 500px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 30%; --streak-color: var(--solana-purple); --streak-delay: -2s; --streak-duration: 5s; --streak-opacity: 0.5; --streak-width: 350px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 50%; --streak-color: var(--solana-green); --streak-delay: -7.5s; --streak-duration: 3.5s; --streak-opacity: 0.6; --streak-width: 750px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 70%; --streak-color: var(--solana-blue); --streak-delay: -5.2s; --streak-duration: 9s; --streak-opacity: 0.4; --streak-width: 450px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 90%; --streak-color: var(--solana-purple); --streak-delay: -0.5s; --streak-duration: 2.2s; --streak-opacity: 0.6; --streak-width: 300px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 20%; --streak-color: var(--solana-green); --streak-delay: -10s; --streak-duration: 11s; --streak-opacity: 0.3; --streak-width: 550px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 60%; --streak-color: var(--solana-blue); --streak-delay: -3.8s; --streak-duration: 4.8s; --streak-opacity: 0.5; --streak-width: 650px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 80%; --streak-color: var(--solana-purple); --streak-delay: -12.4s; --streak-duration: 7.5s; --streak-opacity: 0.4; --streak-width: 400px;">
+      </div>
+    </div>
+
+    <div class="discord-cta">
+      <h2>Join the Genesis Community</h2>
+      <p>Connect with other shippable builders, get help with quests, and participate in our meritocratic governance.
+      </p>
+      <a href="https://discord.gg/PGbUgNmsns" target="_blank" class="btn-discord">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+          <path
+            d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z" />
+        </svg>
+        Join Discord
+      </a>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="{{ get_url(path="") }}" class="footer-logo">
+          <img src="{{ get_url(path='logo.png') }}" alt="{{ config.title }}" />
+          <span>{{ config.title }}</span>
+        </a>
+        <p class="tagline">"We build the system, the system builds the builders."</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Ecosystem</h4>
+        <ul>
+          <li><a href="{{ get_url(path='rules') }}">Rules of Engagement</a></li>
+          <li><a href="{{ get_url(path='roadmap') }}">2026 Roadmap</a></li>
+          <li><a href="{{ get_url(path='quests') }}">Quest Board</a></li>
+          <li><a href="{{ get_url(path='leaderboard') }}">Leaderboard</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Community</h4>
+        <ul>
+          <li><a href="{{ get_url(path='treasury') }}">Treasury</a></li>
+          <li><a href="https://github.com/solana-thailand/genesis" target="_blank">GitHub</a></li>
+          <li><a href="https://discord.gg/PGbUgNmsns" target="_blank">Discord</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Solana Thailand Genesis. All rights reserved.</p>
+        <p>Built with <a href="https://www.getzola.org" target="_blank">Zola</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

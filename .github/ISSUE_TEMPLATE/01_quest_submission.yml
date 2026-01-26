@@ -1,0 +1,47 @@
+name: ⚔️ Quest Submission (Unstake Request)
+description: Submit your work to complete the mission and request your stake back.
+title: "[QUEST] Submission: <Quest Name> by @<GithubUsername>"
+labels: ["quest-submission", "needs-review"]
+body:
+  - type: input
+    id: discord_id
+    attributes:
+      label: Discord Username
+      description: Discord Username for Rank adjustment.
+      placeholder: example#1234
+    validations:
+      required: true
+
+  - type: input
+    id: tx_hash
+    attributes:
+      label: Staking Transaction Hash
+      description: Proof of Stake payment (Tx Hash).
+      placeholder: 5P3GiW...
+    validations:
+      required: true
+
+  - type: input
+    id: public_key
+    attributes:
+      label: Your Public Key (Wallet Address)
+      description: The wallet address you used to stake and where you want to receive your refund.
+      placeholder: 4zMM9G...
+    validations:
+      required: true
+
+  - type: input
+    id: repo_link
+    attributes:
+      label: Repository / PR Link
+      description: Link to your completed work.
+    validations:
+      required: true
+
+  - type: textarea
+    id: learnings
+    attributes:
+      label: What did you learn?
+      description: Briefly summarize what you learned from this Quest.
+    validations:
+      required: true

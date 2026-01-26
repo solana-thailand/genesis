@@ -1,0 +1,48 @@
+name: 💰 Event / Budget Proposal
+description: Propose an event or request budget (for Core Team).
+title: "[OPS] <Event Name/Activity>"
+labels: ["operations", "budget-request"]
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: Why organize this? What is the expected outcome?
+    validations:
+      required: true
+
+  - type: input
+    id: date_venue
+    attributes:
+      label: Date & Venue
+      placeholder: 28 Jan 2026 @ MUICT
+    validations:
+      required: true
+
+  - type: textarea
+    id: budget_breakdown
+    attributes:
+      label: Budget Breakdown (Cost Estimation)
+      description: Itemize all expenses in detail (THB/USD).
+      value: |
+        - Speaker Fee (P'Katopz): $250
+        - Speaker Fee (P'Tae): $250
+        - Speaker Fee (P'Golf): $250
+        - Venue: 0 THB (Sponsored)
+        - F&B: ... THB
+    validations:
+      required: true
+
+  - type: input
+    id: total_request
+    attributes:
+      label: Total Budget Request
+      placeholder: 30,000 THB
+    validations:
+      required: true
+
+  - type: input
+    id: receiver_address
+    attributes:
+      label: Receiver Address
+      placeholder: 4zMM9G...

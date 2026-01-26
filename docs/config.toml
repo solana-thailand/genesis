@@ -1,0 +1,28 @@
+# The URL the site will be built for
+base_url = "https://solana-thailand.github.io/genesis/"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+# The title of the site
+title = "Solana Thailand Genesis"
+
+# Description for SEO
+description = "The Digital HQ for Solana Builders in Thailand. Stake, Build, Earn."
+
+# The default language
+default_language = "en"
+
+[markdown]
+# Highlight code blocks (Rust, TS, etc.)
+highlight_code = true
+highlight_theme = "base16-ocean-dark"
+
+[extra]
+# Custom variables
+author = "Solana Thailand Core Team"
+github_repo = "https://github.com/solana-thailand/genesis"
+discord_url = "https://discord.gg/PGbUgNmsns"

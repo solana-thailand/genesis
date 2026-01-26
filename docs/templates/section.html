@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="section-content">
+    {{ section.content | safe }}
+</div>
+
+{% if section.extra.layout == "cards" %}
+<div class="section-grid">
+    {% for page in section.pages %}
+    <div class="glass-card">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <h3>{{ page.title }}</h3>
+            {% if page.extra.status %}
+            <span class="status-badge {{ page.extra.status | slugify }}">{{ page.extra.status }}</span>
+            {% endif %}
+        </div>
+        <p>{{ page.description | default(value="Explore this mission and proof your work.") }}</p>
+        <a href="{{ page.permalink }}" class="btn btn-outline">View Details</a>
+    </div>
+    {% endfor %}
+
+    {% for subsection_path in section.subsections %}
+    {% set subsection = get_section(path=subsection_path) %}
+    <div class="glass-card">
+        <h3>{{ subsection.title }}</h3>
+        <p>{{ subsection.description | default(value="Explore this category.") }}</p>
+        <a href="{{ subsection.permalink }}" class="btn btn-outline">Explore</a>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div class="grid">
+    {% for page in section.pages %}
+    <div class="glass-card">
+        <h3>{{ page.title }}</h3>
+        <p>{{ page.description | default(value="Explore this page.") }}</p>
+        <a href="{{ page.permalink }}" class="btn btn-outline">View Details</a>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% endblock content %}

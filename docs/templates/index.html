@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block header %}
+{# Hide default header #}
+{% endblock header %}
+
+{% block content %}
+<section class="hero">
+    <h1>{{ section.title }}<br>{{ section.extra.title2 }}</h1>
+    {% if section.description %}
+    <p>{{ section.description }}</p>
+    {% endif %}
+
+    <div class="cta-group">
+        <a href="{{ get_url(path='quests') }}" class="btn btn-primary">Start Building</a>
+        <a href="{{ get_url(path='rules') }}" class="btn btn-outline">Read Rules</a>
+    </div>
+</section>
+
+<section class="main-content">
+
+    <div class="grid">
+        <div class="glass-card">
+            <h3>Rules of Engagement</h3>
+            <p>Commitment over Hype. Stake to verify your intent and prove your skills through code.</p>
+            <a href="{{ get_url(path='rules') }}" class="btn btn-outline">View Rules</a>
+        </div>
+        <div class="glass-card">
+            <h3>Quest Board</h3>
+            <p>Choose your path. Complete hands-on quests to earn reputation and unlock the ecosystem.</p>
+            <a href="{{ get_url(path='quests') }}" class="btn btn-outline">Browse Quests</a>
+        </div>
+        <div class="glass-card">
+            <h3>Leaderboard</h3>
+            <p>Reputation is Currency. Track the proof-of-work of our top shippable builders.</p>
+            <a href="{{ get_url(path='leaderboard') }}" class="btn btn-outline">Check Ranks</a>
+        </div>
+        <div class="glass-card">
+            <h3>2026 Roadmap</h3>
+            <p>The Path Ahead. Explore our strategic milestones for growing the Solana builder ecosystem in Thailand.
+            </p>
+            <a href="{{ get_url(path='roadmap') }}" class="btn btn-outline">Explore Roadmap</a>
+        </div>
+    </div>
+
+</section>
+{% endblock content %}
