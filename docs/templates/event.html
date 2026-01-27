@@ -103,12 +103,14 @@
         {{ page.content | safe }}
     </div>
 
-    <div class="cta-group" style="justify-content: center; margin-top: 4rem;">
+    <div class="cta-group">
         {% if page.extra.registration_deadline %}
-        <span class="btn btn-outline" style="cursor: default; opacity: 0.6;">Deadline: {{
-            page.extra.registration_deadline }}</span>
+        <div class="info-badge">
+            <span class="label">Deadline</span>
+            <span class="value">{{ page.extra.registration_deadline }}</span>
+        </div>
         {% endif %}
-        <a href="https://discord.gg/PGbUgNmsns" class="btn btn-primary">Inquiries (Discord)</a>
+        <a href="https://discord.gg/PGbUgNmsns" class="btn btn-primary btn-cta">Inquiries (Discord)</a>
     </div>
 </div>
 
@@ -336,78 +338,296 @@
     /* Agenda: Tighter Timeline */
     .event-content>ul:first-of-type {
         margin-bottom: 4rem;
-    }
-
-    .event-content>ul:first-of-type li {
-        padding: 0.75rem 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-        display: flex;
-        gap: 1.5rem;
-        font-size: 0.95rem;
-    }
-
-    .event-content>ul:first-of-type li strong {
-        color: var(--solana-green);
-        min-width: 100px;
-        font-family: var(--font-mono);
-        flex-shrink: 0;
-    }
-
-    /* Course Outline: Grid System */
-    .event-content h4 {
-        margin-top: 3rem;
-        margin-bottom: 1.25rem;
-        color: var(--solana-green);
-        font-size: 1rem;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        background: rgba(20, 241, 149, 0.05);
-        padding: 0.5rem 1rem;
-        border-left: 2px solid var(--solana-green);
-        display: block;
-    }
-
-    /* Text under H4 */
-    .event-content h4+p {
-        font-size: 0.85rem;
-        color: var(--text-dim);
-        margin-top: -0.75rem;
-        margin-bottom: 1rem;
-        font-style: italic;
-    }
-
-    /* Make modules appear in a compact grid */
-    .event-content h4+ul,
-    .event-content h4+p+ul {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 0.75rem;
         list-style: none;
         padding: 0;
     }
 
+    .event-content>ul:first-of-type li {
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        display: flex;
+        gap: 2rem;
+        font-size: 1rem;
+        align-items: baseline;
+    }
+
+    .event-content>ul:first-of-type li strong {
+        color: var(--solana-green);
+        min-width: 120px;
+        font-family: var(--font-mono);
+        flex-shrink: 0;
+    }
+
+    /* Course Outline: Grouped Boxes */
+    .event-content h4 {
+        margin-top: 4rem;
+        margin-bottom: 0;
+        color: var(--solana-green);
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        background: rgba(20, 241, 149, 0.08);
+        padding: 0.75rem 1.25rem;
+        border-left: 3px solid var(--solana-green);
+        display: block;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .event-content h4+p {
+        font-size: 0.85rem;
+        color: var(--text-dim);
+        background: rgba(20, 241, 149, 0.03);
+        margin: 0;
+        padding: 0.5rem 1.25rem;
+        font-style: italic;
+    }
+
+    /* The UL is now the container */
+    .event-content h4+ul,
+    .event-content h4+p+ul {
+        list-style: none;
+        padding: 1.25rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-top: none;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        margin-bottom: 2rem;
+    }
+
     .event-content h4+ul li,
     .event-content h4+p+ul li {
-        background: rgba(255, 255, 255, 0.02);
-        padding: 0.75rem 1rem;
-        border-radius: 6px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        font-size: 0.9rem;
-        display: block;
-        /* Reset from flex */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        /* Override default */
-        line-height: 1.5;
+        position: relative;
+        padding: 0.5rem 0 0.5rem 1.75rem;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--text-secondary);
     }
 
-    .event-content h4+ul li:hover,
-    .event-content h4+p+ul li:hover {
-        background: rgba(255, 255, 255, 0.04);
-        border-color: rgba(20, 241, 149, 0.2);
+    .event-content h4+ul li::before,
+    .event-content h4+p+ul li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--solana-green);
+        opacity: 0.6;
     }
 
-    .event-content li:last-child {
-        border-bottom: none;
+    .event-content h4+ul li strong,
+    .event-content h4+p+ul li strong {
+        color: var(--text-primary);
+    }
+
+    .cta-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: 5rem;
+    }
+
+    .info-badge {
+        display: inline-flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--glass-border);
+        border-radius: 100px;
+        overflow: hidden;
+        height: 48px;
+        /* Match button height */
+    }
+
+    .info-badge .label {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 0 1.25rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-dim);
+        border-right: 1px solid var(--glass-border);
+    }
+
+    .info-badge .value {
+        padding: 0 1.5rem;
+        color: var(--solana-green);
+        font-weight: 600;
+        font-family: var(--font-mono);
+    }
+
+    .btn-cta {
+        height: 48px;
+        min-width: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+        .event-container {
+            padding: 1.5rem 1rem 3rem;
+        }
+
+        .event-hero {
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .event-desc {
+            font-size: 1.05rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .poster-frame {
+            margin-bottom: 2.5rem;
+        }
+
+        .countdown-card {
+            padding: 1.5rem 0.75rem;
+            margin-top: 1rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-color: rgba(20, 241, 149, 0.15);
+        }
+
+        .countdown-grid {
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .time-block span {
+            font-size: 1.75rem;
+        }
+
+        .time-block label {
+            font-size: 0.55rem;
+            margin-top: 0.25rem;
+        }
+
+        .status-msg {
+            font-size: 0.8rem;
+        }
+
+        .event-details.grid {
+            margin: 3rem 0;
+            gap: 1rem;
+        }
+
+        .glass-card {
+            padding: 1.5rem;
+        }
+
+        .glass-card h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .speakers-section {
+            margin: 4rem 0;
+        }
+
+        .speaker-card {
+            padding: 2.5rem 1.5rem;
+            max-width: 100%;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .speaker-avatar {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 1.5rem;
+        }
+
+        .speaker-role {
+            font-size: 0.65rem;
+            margin-bottom: 1rem;
+            padding: 0.3rem 1rem;
+        }
+
+        .speaker-card h4 {
+            font-size: 1.4rem;
+        }
+
+        .speaker-card p {
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .event-content {
+            padding: 2.5rem 0;
+        }
+
+        .event-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .event-content h4 {
+            font-size: 0.95rem;
+            padding: 0.5rem 1rem;
+        }
+
+        /* Agenda: Stack vertically on mobile */
+        .event-content>ul:first-of-type li {
+            flex-direction: column;
+            gap: 0.35rem;
+            padding: 1rem 0;
+            align-items: flex-start;
+        }
+
+        .event-content>ul:first-of-type li strong {
+            min-width: auto;
+            font-size: 0.9rem;
+        }
+
+        /* Course Modules */
+        .event-content h4+ul,
+        .event-content h4+p+ul {
+            padding: 1rem;
+        }
+
+        .event-content h4+ul li,
+        .event-content h4+p+ul li {
+            font-size: 0.9rem;
+            padding: 0.4rem 0 0.4rem 1.25rem;
+        }
+
+        .cta-group {
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 3rem !important;
+            align-items: center;
+        }
+
+        .info-badge,
+        .btn-cta {
+            width: 100%;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .info-badge .label {
+            flex: 1;
+            justify-content: center;
+        }
+
+        .info-badge .value {
+            flex: 1.2;
+            text-align: center;
+        }
     }
 </style>
 
@@ -421,9 +641,13 @@
             const distance = eventDate - now;
 
             if (distance < 0) {
-                document.getElementById("countdown").style.display = "none";
-                document.getElementById("event-status").innerHTML = "🚀 EVENT IS LIVE!";
-                document.getElementById("event-status").style.color = "var(--solana-purple)";
+                const countdownEl = document.getElementById("countdown");
+                if (countdownEl) countdownEl.style.display = "none";
+                const statusEl = document.getElementById("event-status");
+                if (statusEl) {
+                    statusEl.innerHTML = "🚀 EVENT IS LIVE!";
+                    statusEl.style.color = "var(--solana-purple)";
+                }
                 return;
             }
 
@@ -432,10 +656,15 @@
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("days").innerText = String(days).padStart(2, '0');
-            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+            const d = document.getElementById("days");
+            const h = document.getElementById("hours");
+            const m = document.getElementById("minutes");
+            const s = document.getElementById("seconds");
+
+            if (d) d.innerText = String(days).padStart(2, '0');
+            if (h) h.innerText = String(hours).padStart(2, '0');
+            if (m) m.innerText = String(minutes).padStart(2, '0');
+            if (s) s.innerText = String(seconds).padStart(2, '0');
         }
 
         setInterval(updateCountdown, 1000);

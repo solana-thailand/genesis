@@ -58,10 +58,13 @@ The goal is to provide students with an overview of building high-performance sy
 
 #### 4. Career Path & Global Opportunities
 - **Community**:
-    - [Solana Developer Thailand](https://www.facebook.com/groups/446906760534619) | [Solana in Thailand](https://www.facebook.com/SolanaThailang)
+    - [Solana Developer Thailand](https://www.facebook.com/groups/446906760534619)
+    - [Solana in Thailang](https://www.facebook.com/SolanaThailang)
 - **Ecosystem & Funding**:
-    - [Colosseum Hackathon](https://arena.colosseum.org/hackathon) | [Superteam Earn](https://earn.superteam.fun/)
-    - [Gibwork](https://gib.work/) | [ShipyardTH](https://x.com/SuperteamTH)
+    - [Colosseum Hackathon](https://arena.colosseum.org/hackathon)
+    - [Superteam Earn](https://earn.superteam.fun/)
+    - [Gibwork](https://gib.work/)
+    - [ShipyardTH](https://x.com/SuperteamTH)
 - **Global Jobs**: [jobs.solana.com](https://jobs.solana.com/)
 
 #### 5. Fireside Chat: Building the Future
