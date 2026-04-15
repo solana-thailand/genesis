@@ -1,0 +1,292 @@
+{% extends "base.html" %} {% block extra_head %}
+<style>
+    .events-hero {
+        text-align: center;
+        padding: 4rem 0 2rem;
+    }
+
+    .events-hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .events-desc {
+        font-size: 1.35rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        margin: 0 auto 1.5rem;
+        line-height: 1.7;
+        font-weight: 300;
+    }
+
+    .events-hero p {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        margin: 0 auto 3rem;
+        line-height: 1.7;
+    }
+
+    .events-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+        gap: 2rem;
+        padding-bottom: 4rem;
+    }
+
+    .event-card {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        overflow: hidden;
+        transition: border-color 0.2s;
+        align-items: flex-start;
+    }
+
+    .event-card:hover {
+        border-color: var(--solana-green);
+    }
+
+    .card-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        font-size: 0.65rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--glass-border);
+        color: var(--text-dim);
+        z-index: 1;
+    }
+
+    .badge-live {
+        background: rgba(20, 241, 149, 0.08);
+        border-color: var(--solana-green);
+        color: var(--solana-green);
+    }
+
+    .badge-done {
+        background: rgba(153, 69, 255, 0.08);
+        border-color: var(--solana-purple);
+        color: var(--solana-purple);
+    }
+
+    .card-poster {
+        flex-shrink: 0;
+        width: 120px;
+        height: 120px;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid var(--glass-border);
+    }
+
+    .card-poster img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.9;
+        transition: opacity 0.2s;
+    }
+
+    .event-card:hover .card-poster img {
+        opacity: 1;
+    }
+
+    .card-body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+    }
+
+    .card-body h3 {
+        font-size: 1.15rem;
+        color: #fff;
+        margin: 0 0 0.5rem;
+        line-height: 1.3;
+        padding-right: 4rem;
+    }
+
+    .card-subtitle {
+        font-size: 0.85rem;
+        color: var(--solana-green);
+        margin: 0 0 0.75rem;
+        font-weight: 400;
+    }
+
+    .card-meta {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        margin-bottom: 0.75rem;
+        font-size: 0.8rem;
+        color: var(--text-dim);
+        font-family: var(--font-mono);
+    }
+
+    .card-desc {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        line-height: 1.5;
+        margin: 0 0 1rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        flex: 1;
+    }
+
+    .card-actions {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .card-actions .btn {
+        flex: 1;
+        min-width: 80px;
+        text-align: center;
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+        .events-hero {
+            padding: 2rem 0 1rem;
+        }
+
+        .events-hero h1 {
+            font-size: 2.25rem;
+        }
+
+        .events-desc {
+            font-size: 1.05rem;
+        }
+
+        .events-grid {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .event-card {
+            flex-direction: column;
+            padding: 1.25rem;
+            gap: 1rem;
+        }
+
+        .card-poster {
+            width: 80px;
+            height: 80px;
+        }
+
+        .card-body h3 {
+            font-size: 1.05rem;
+            padding-right: 0;
+        }
+
+        .card-subtitle {
+            font-size: 0.8rem;
+        }
+
+        .card-meta {
+            font-size: 0.75rem;
+        }
+
+        .card-desc {
+            font-size: 0.85rem;
+            -webkit-line-clamp: 3;
+        }
+
+        .card-actions .btn {
+            min-width: 70px;
+            font-size: 0.75rem;
+            padding: 0.35rem 0.7rem;
+        }
+    }
+</style>
+{% endblock extra_head %} {% block header %} {# Hidden - rendered inside content
+block #} {% endblock header %} {% block content %}
+<section class="events-hero">
+    <h1>{{ section.title }}</h1>
+    {% if section.description %}
+    <p class="events-desc">{{ section.description }}</p>
+    {% endif %} {{ section.content | safe }}
+</section>
+
+<section class="events-grid">
+    {% for page in section.pages %}
+    <div class="event-card glass-card">
+        {% if page.extra.event_status == "completed" %}
+        <span class="card-badge badge-done">✅ Completed</span>
+        {% elif page.extra.event_status == "upcoming" %}
+        <span class="card-badge badge-live">🔥 Upcoming</span>
+        {% else %}
+        <span class="card-badge">Event</span>
+        {% endif %} {% if page.extra.poster_image %}
+        <div class="card-poster">
+            <img
+                src="{{ get_url(path=page.extra.poster_image) }}"
+                alt="{{ page.title }}"
+            />
+        </div>
+        {% endif %}
+
+        <div class="card-body">
+            <h3>{{ page.title }}</h3>
+            {% if page.extra.subtitle %}
+            <p class="card-subtitle">{{ page.extra.subtitle }}</p>
+            {% endif %}
+
+            <div class="card-meta">
+                {% if page.extra.event_date %}
+                <span>📅 {{ page.extra.event_date }}</span>
+                {% endif %} {% if page.extra.event_time %}
+                <span>🕐 {{ page.extra.event_time }}</span>
+                {% endif %} {% if page.extra.venue_name %}
+                <span>📍 {{ page.extra.venue_name }}</span>
+                {% endif %}
+            </div>
+
+            {% if page.description %}
+            <p class="card-desc">{{ page.description }}</p>
+            {% endif %}
+
+            <div class="card-actions">
+                {% if page.extra.event_status == "upcoming" and
+                page.extra.registration_url %}
+                <a
+                    href="{{ page.extra.registration_url }}"
+                    class="btn btn-primary"
+                    target="_blank"
+                    rel="noopener"
+                    >Register</a
+                >
+                {% endif %} {% if page.extra.event_status == "completed" and
+                page.extra.recording_url %}
+                <a
+                    href="{{ page.extra.recording_url }}"
+                    class="btn btn-outline"
+                    style="
+                        border-color: var(--solana-purple);
+                        color: var(--solana-purple);
+                    "
+                    target="_blank"
+                    rel="noopener"
+                    >🎬 Recording</a
+                >
+                {% endif %}
+
+                <a href="{{ page.path }}" class="btn btn-outline">Details</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+{% endblock content %}
