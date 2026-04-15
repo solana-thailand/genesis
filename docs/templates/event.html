@@ -1,29 +1,32 @@
-{% extends "base.html" %} {% block header %} {# Hidden because it is rendered
-inside the content block #} {% endblock header %} {% block content %}
+{% extends "base.html" %}
+
+{% block header %}
+{# Hidden because it is rendered inside the content block #}
+{% endblock header %}
+
+{% block content %}
 <div class="event-container">
     <div class="event-hero">
-        {% if page.extra.event_status == "completed" %}
-        <div class="badge-event badge-completed">✅ Event Completed</div>
-        {% else %}
         <div class="badge-event">Exclusive Seminar</div>
-        {% endif %}
-
         <h1>{{ page.title }}</h1>
         {% if page.extra.subtitle %}
         <h2 class="subtitle">{{ page.extra.subtitle }}</h2>
-        {% endif %} {% if page.extra.poster_image %}
+        {% endif %}
+
+        {% if page.extra.poster_image %}
         <!-- Official Poster -->
         <div class="poster-frame">
-            <img
-                src="{{ get_url(path=page.extra.poster_image) }}"
-                alt="{{ page.title }} Poster"
-                class="event-poster"
-            />
+            <img src="{{ get_url(path=page.extra.poster_image) }}" alt="{{ page.title }} Poster" class="event-poster">
         </div>
-        {% endif %} {% if page.description %}
-        <p class="event-desc">{{ page.description }}</p>
-        {% endif %} {% if page.extra.countdown_target and
-        page.extra.event_status != "completed" %}
+        {% endif %}
+
+        {% if page.description %}
+        <p class="event-desc">
+            {{ page.description }}
+        </p>
+        {% endif %}
+
+        {% if page.extra.countdown_target %}
         <!-- Countdown Section -->
         <div class="countdown-card">
             <div id="countdown" class="countdown-grid">
@@ -46,88 +49,31 @@ inside the content block #} {% endblock header %} {% block content %}
             </div>
             <div id="event-status" class="status-msg">Countdown to Event</div>
         </div>
-        {% endif %} {% if page.extra.event_status == "completed" %}
-        <!-- Event Resources for Completed Events -->
-        <div class="completed-resources">
-            {% if page.extra.recording_url %}
-            <a
-                href="{{ page.extra.recording_url }}"
-                class="btn btn-primary btn-cta"
-                target="_blank"
-                rel="noopener"
-            >
-                🎬 Watch Recording
-            </a>
-            {% endif %} {% if page.extra.slides_url %}
-            <a
-                href="{{ page.extra.slides_url }}"
-                class="btn btn-outline btn-cta"
-                target="_blank"
-                rel="noopener"
-            >
-                📑 View Slides
-            </a>
-            {% endif %}
-        </div>
-
-        {% if page.extra.recording_url %}
-        <!-- YouTube Embed -->
-        <div class="video-frame">
-            {% set yt_id = page.extra.recording_url | split(pat="v=") | last %}
-            <iframe
-                src="https://www.youtube.com/embed/{{ yt_id }}"
-                title="{{ page.title }} Recording"
-                frameborder="0"
-                allow="
-                    accelerometer;
-                    autoplay;
-                    clipboard-write;
-                    encrypted-media;
-                    gyroscope;
-                    picture-in-picture;
-                "
-                allowfullscreen
-            >
-            </iframe>
-        </div>
-        {% endif %} {% if page.extra.gallery_image %}
-        <!-- Group Photo Gallery -->
-        <div class="gallery-section">
-            <h3>📸 Event Highlights</h3>
-            <div class="gallery-frame">
-                <img
-                    src="{{ get_url(path=page.extra.gallery_image) }}"
-                    alt="Group Photo from {{ page.title }}"
-                    class="gallery-photo"
-                />
-            </div>
-        </div>
-        {% endif %} {% endif %}
+        {% endif %}
     </div>
 
     <div class="event-details grid">
         {% if page.extra.event_date %}
         <div class="glass-card">
             <h3>📅 Date & Time</h3>
-            <p>
-                {{ page.extra.event_date }}<br />{{ page.extra.event_time |
-                default(value="") }}
-            </p>
+            <p>{{ page.extra.event_date }}<br>{{ page.extra.event_time | default(value="") }}</p>
         </div>
-        {% endif %} {% if page.extra.venue_name %}
+        {% endif %}
+
+        {% if page.extra.venue_name %}
         <div class="glass-card">
             <h3>📍 Venue</h3>
-            <p>
-                {{ page.extra.venue_name }}<br />{{ page.extra.venue_location |
-                default(value="") }}
-            </p>
+            <p>{{ page.extra.venue_name }}<br>{{ page.extra.venue_location | default(value="") }}</p>
         </div>
-        {% endif %} {% if page.extra.perks %}
+        {% endif %}
+
+        {% if page.extra.perks %}
         <div class="glass-card">
             <h3>💎 Perks</h3>
             <p>
-                {% for perk in page.extra.perks %} {{ perk }}{% if not loop.last
-                %}<br />{% endif %} {% endfor %}
+                {% for perk in page.extra.perks %}
+                {{ perk }}{% if not loop.last %}<br>{% endif %}
+                {% endfor %}
             </p>
         </div>
         {% endif %}
@@ -139,16 +85,11 @@ inside the content block #} {% endblock header %} {% block content %}
         <div class="speakers-grid">
             {% for speaker in page.extra.speakers %}
             <div class="speaker-card">
-                <div
-                    class="speaker-role {% if speaker.role_type == 'secondary' %}speaker-role-alt{% endif %}"
-                >
-                    {{ speaker.role }}
-                </div>
+                <div class="speaker-role {% if speaker.role_type == 'secondary' %}speaker-role-alt{% endif %}">{{
+                    speaker.role }}</div>
                 <div class="speaker-avatar">
-                    <img
-                        src="{{ get_url(path=speaker.image) | default(value=get_url(path='logo.png')) }}"
-                        alt="{{ speaker.name }}"
-                    />
+                    <img src="{{ get_url(path=speaker.image) | default(value=get_url(path='logo.png')) }}"
+                        alt="{{ speaker.name }}">
                 </div>
                 <h4>{{ speaker.name }}</h4>
                 <p>{{ speaker.org | safe }}</p>
@@ -158,27 +99,18 @@ inside the content block #} {% endblock header %} {% block content %}
     </div>
     {% endif %}
 
-    <div class="event-content">{{ page.content | safe }}</div>
+    <div class="event-content">
+        {{ page.content | safe }}
+    </div>
 
     <div class="cta-group">
-        {% if page.extra.event_status != "completed" %} {% if
-        page.extra.registration_url %}
-        <a
-            href="{{ page.extra.registration_url }}"
-            class="btn btn-primary btn-cta"
-            target="_blank"
-            rel="noopener"
-            >Register Now</a
-        >
-        {% endif %} {% if page.extra.registration_deadline %}
+        {% if page.extra.registration_deadline %}
         <div class="info-badge">
             <span class="label">Deadline</span>
             <span class="value">{{ page.extra.registration_deadline }}</span>
         </div>
-        {% endif %} {% endif %}
-        <a href="https://discord.gg/PGbUgNmsns" class="btn btn-outline btn-cta"
-            >Inquiries (Discord)</a
-        >
+        {% endif %}
+        <a href="https://discord.gg/PGbUgNmsns" class="btn btn-primary btn-cta">Inquiries (Discord)</a>
     </div>
 </div>
 
@@ -224,12 +156,6 @@ inside the content block #} {% endblock header %} {% block content %}
         margin-bottom: 2rem;
     }
 
-    .badge-completed {
-        background: rgba(153, 69, 255, 0.08);
-        border-color: var(--solana-purple);
-        color: var(--solana-purple);
-    }
-
     .event-desc {
         font-size: 1.35rem;
         color: var(--text-secondary);
@@ -258,59 +184,6 @@ inside the content block #} {% endblock header %} {% block content %}
 
     .poster-frame:hover .event-poster {
         opacity: 1;
-    }
-
-    /* Completed Event Resources */
-    .completed-resources {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1.5rem;
-        margin-bottom: 3rem;
-        flex-wrap: wrap;
-    }
-
-    /* Video Embed */
-    .video-frame {
-        max-width: 800px;
-        margin: 0 auto 4rem;
-        border-radius: 12px;
-        overflow: hidden;
-        border: 1px solid var(--glass-border);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        aspect-ratio: 16 / 9;
-    }
-
-    .video-frame iframe {
-        width: 100%;
-        height: 100%;
-        display: block;
-    }
-
-    /* Gallery Section */
-    .gallery-section {
-        max-width: 800px;
-        margin: 3rem auto 0;
-        text-align: center;
-    }
-
-    .gallery-section h3 {
-        color: var(--solana-green);
-        font-size: 1.2rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .gallery-frame {
-        border-radius: 12px;
-        overflow: hidden;
-        border: 1px solid var(--glass-border);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    }
-
-    .gallery-photo {
-        width: 100%;
-        height: auto;
-        display: block;
     }
 
     /* Countdown Styling - Glass 2.0 */
@@ -463,13 +336,13 @@ inside the content block #} {% endblock header %} {% block content %}
     }
 
     /* Agenda: Tighter Timeline */
-    .event-content > ul:first-of-type {
+    .event-content>ul:first-of-type {
         margin-bottom: 4rem;
         list-style: none;
         padding: 0;
     }
 
-    .event-content > ul:first-of-type li {
+    .event-content>ul:first-of-type li {
         padding: 1rem 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         display: flex;
@@ -478,7 +351,7 @@ inside the content block #} {% endblock header %} {% block content %}
         align-items: baseline;
     }
 
-    .event-content > ul:first-of-type li strong {
+    .event-content>ul:first-of-type li strong {
         color: var(--solana-green);
         min-width: 120px;
         font-family: var(--font-mono);
@@ -501,7 +374,7 @@ inside the content block #} {% endblock header %} {% block content %}
         border-top-right-radius: 8px;
     }
 
-    .event-content h4 + p {
+    .event-content h4+p {
         font-size: 0.85rem;
         color: var(--text-dim);
         background: rgba(20, 241, 149, 0.03);
@@ -511,8 +384,8 @@ inside the content block #} {% endblock header %} {% block content %}
     }
 
     /* The UL is now the container */
-    .event-content h4 + ul,
-    .event-content h4 + p + ul {
+    .event-content h4+ul,
+    .event-content h4+p+ul {
         list-style: none;
         padding: 1.25rem;
         background: rgba(255, 255, 255, 0.02);
@@ -523,8 +396,8 @@ inside the content block #} {% endblock header %} {% block content %}
         margin-bottom: 2rem;
     }
 
-    .event-content h4 + ul li,
-    .event-content h4 + p + ul li {
+    .event-content h4+ul li,
+    .event-content h4+p+ul li {
         position: relative;
         padding: 0.5rem 0 0.5rem 1.75rem;
         font-size: 1rem;
@@ -532,8 +405,8 @@ inside the content block #} {% endblock header %} {% block content %}
         color: var(--text-secondary);
     }
 
-    .event-content h4 + ul li::before,
-    .event-content h4 + p + ul li::before {
+    .event-content h4+ul li::before,
+    .event-content h4+p+ul li::before {
         content: "→";
         position: absolute;
         left: 0;
@@ -541,8 +414,8 @@ inside the content block #} {% endblock header %} {% block content %}
         opacity: 0.6;
     }
 
-    .event-content h4 + ul li strong,
-    .event-content h4 + p + ul li strong {
+    .event-content h4+ul li strong,
+    .event-content h4+p+ul li strong {
         color: var(--text-primary);
     }
 
@@ -562,6 +435,7 @@ inside the content block #} {% endblock header %} {% block content %}
         border-radius: 100px;
         overflow: hidden;
         height: 48px;
+        /* Match button height */
     }
 
     .info-badge .label {
@@ -619,19 +493,6 @@ inside the content block #} {% endblock header %} {% block content %}
 
         .poster-frame {
             margin-bottom: 2.5rem;
-        }
-
-        .completed-resources {
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .video-frame {
-            margin-bottom: 2.5rem;
-        }
-
-        .gallery-section {
-            margin: 2rem auto 0;
         }
 
         .countdown-card {
@@ -720,26 +581,26 @@ inside the content block #} {% endblock header %} {% block content %}
         }
 
         /* Agenda: Stack vertically on mobile */
-        .event-content > ul:first-of-type li {
+        .event-content>ul:first-of-type li {
             flex-direction: column;
             gap: 0.35rem;
             padding: 1rem 0;
             align-items: flex-start;
         }
 
-        .event-content > ul:first-of-type li strong {
+        .event-content>ul:first-of-type li strong {
             min-width: auto;
             font-size: 0.9rem;
         }
 
         /* Course Modules */
-        .event-content h4 + ul,
-        .event-content h4 + p + ul {
+        .event-content h4+ul,
+        .event-content h4+p+ul {
             padding: 1rem;
         }
 
-        .event-content h4 + ul li,
-        .event-content h4 + p + ul li {
+        .event-content h4+ul li,
+        .event-content h4+p+ul li {
             font-size: 0.9rem;
             padding: 0.4rem 0 0.4rem 1.25rem;
         }
@@ -770,12 +631,10 @@ inside the content block #} {% endblock header %} {% block content %}
     }
 </style>
 
-{% if page.extra.countdown_target and page.extra.event_status != "completed" %}
+{% if page.extra.countdown_target %}
 <script>
     (function () {
-        const eventDate = new Date(
-            "{{ page.extra.countdown_target }}",
-        ).getTime();
+        const eventDate = new Date("{{ page.extra.countdown_target }}").getTime();
 
         function updateCountdown() {
             const now = new Date().getTime();
@@ -793,12 +652,8 @@ inside the content block #} {% endblock header %} {% block content %}
             }
 
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor(
-                (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
-            );
-            const minutes = Math.floor(
-                (distance % (1000 * 60 * 60)) / (1000 * 60),
-            );
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             const d = document.getElementById("days");
@@ -806,14 +661,15 @@ inside the content block #} {% endblock header %} {% block content %}
             const m = document.getElementById("minutes");
             const s = document.getElementById("seconds");
 
-            if (d) d.innerText = String(days).padStart(2, "0");
-            if (h) h.innerText = String(hours).padStart(2, "0");
-            if (m) m.innerText = String(minutes).padStart(2, "0");
-            if (s) s.innerText = String(seconds).padStart(2, "0");
+            if (d) d.innerText = String(days).padStart(2, '0');
+            if (h) h.innerText = String(hours).padStart(2, '0');
+            if (m) m.innerText = String(minutes).padStart(2, '0');
+            if (s) s.innerText = String(seconds).padStart(2, '0');
         }
 
         setInterval(updateCountdown, 1000);
         updateCountdown();
     })();
 </script>
-{% endif %} {% endblock content %}
+{% endif %}
+{% endblock content %}

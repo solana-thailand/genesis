@@ -6,34 +6,23 @@ weight = 10
 
 [extra]
 hide_header = true
-event_status = "completed"
 subtitle = "Building the Future on Solana"
 event_date = "Wednesday, 28 January 2026"
 event_time = "1:00 PM – 4:00 PM"
+countdown_target = "2026-01-28T13:00:00+07:00"
 venue_name = "Room IT331, 3rd Floor"
 venue_location = "Faculty of ICT, Mahidol University"
 poster_image = "muict-poster-2026.jpg"
-recording_url = "https://www.youtube.com/watch?v=KHYwV8qtMys"
-slides_url = "https://docs.google.com/presentation/d/1b9R6_dKeOMj7tlQp4jtDC5DX_4FCI5I5bXqLPf0XmW8/edit"
-gallery_image = "muict-group-photo-2026.jpg"
+registration_deadline = "16 Jan"
 perks = [
     "Join for FREE + e-Certificate",
     "3 Hours Digital Literacy (AT)"
 ]
 speakers = [
     { name = "Mr. Gui Bibeau", role = "Special Guest", role_type = "primary", org = "Head of Education @ Solana Foundation", image = "gui-bibeau.jpg" },
-    { name = "Mr. Todsaporn Banjerdkit", role = "Lead Speaker", role_type = "secondary", org = "(Katopz)<br>Rustaceans, AI / Solana Developer<br>Founder – Noob learning<br>CTO Maxion Game<br>Former Data Engineer – PeopleDot (Japan)", image = "katopz.jpg" }
+    { name = "Mr. Todsaporn Banjerdkit", role = "Lead Speaker", role_type = "secondary", org = "(Katopz)<br>Rustaceans, AI / Solana Developer<br>Founder – Noob Learning<br>CTO Maxion Game<br>Former Data Engineer – PeopleDot (Japan)", image = "katopz.jpg" }
 ]
 +++
-
-### 📺 Event Recording & Resources
-
-This event has concluded. Check out the resources below:
-
-- **🎬 Full Recording**: [Watch on YouTube](https://www.youtube.com/watch?v=KHYwV8qtMys)
-- **📑 Presentation Slides**: [View on Google Slides](https://docs.google.com/presentation/d/1b9R6_dKeOMj7tlQp4jtDC5DX_4FCI5I5bXqLPf0XmW8/edit)
-
----
 
 ### Agenda
 
@@ -41,7 +30,7 @@ This event has concluded. Check out the resources below:
 - **13:10 – 14:30**: Session Part 1: Modern Systems & Rust (by Katopz)
 - **14:30 – 14:45**: Zero-Waste Break (Networking & Coffee Break)
 - **14:45 – 15:30**: Session Part 2: Hands-on Solana Playground (by Katopz)
-- **15:30 – 15:50**: Special Fireside Chat: "Building the Future of Solana in Thailand" (Katopz x Gui Bibeau)
+- **15:30 – 15:50**: Special Fireside Chat: “Building the Future of Solana in Thailand” (Katopz x Gui Bibeau)
 - **15:50 – 16:00**: Q&A, Photo Session
 
 ---
@@ -84,5 +73,5 @@ A discussion between **Katopz** and **Gui Bibeau** on the vision for Thailand's 
 ---
 
 ### Event Notes
-- **Zero Waste Event**: Please bring your own reusable water bottle.
+- **Zero Waste Event**: Please bring your own reusable water bottle. 
 - **Inquiries**: Join our Discord for more information.

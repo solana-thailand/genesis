@@ -1,138 +1,55 @@
-{% extends "base.html" %} {% block header %} {# Hide default header #} {%
-endblock header %} {% block content %}
+{% extends "base.html" %}
+
+{% block header %}
+{# Hide default header #}
+{% endblock header %}
+
+{% block content %}
 <section class="hero">
-    <h1>{{ section.title }}<br />{{ section.extra.title2 }}</h1>
+    <h1>{{ section.title }}<br>{{ section.extra.title2 }}</h1>
     {% if section.description %}
     <p>{{ section.description }}</p>
     {% endif %}
 
     <div class="cta-group">
-        <a href="{{ get_url(path='quests') }}" class="btn btn-primary"
-            >Start Building</a
-        >
-        <a href="{{ get_url(path='rules') }}" class="btn btn-outline"
-            >Read Rules</a
-        >
+        <a href="{{ get_url(path='quests') }}" class="btn btn-primary">Start Building</a>
+        <a href="{{ get_url(path='rules') }}" class="btn btn-outline">Read Rules</a>
     </div>
 </section>
 
 <section class="main-content">
+
     <div class="grid">
-        <!-- Upcoming April 2026 Event Card -->
+        <!-- New ICT Event Card -->
         <div class="glass-card event-highlight">
-            <span class="status-badge active" style="margin-bottom: 1rem"
-                >🔥 Upcoming: Apr 26</span
-            >
-            <h3>Solana x AI Builders: The Road to Mainnet #1</h3>
-            <p>
-                Deep dive into Rust, AI Agents, and the Solana ecosystem.
-                Workshops, talks, and networking at ContributeDAO.
-            </p>
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap">
-                <a
-                    href="https://luma.com/vaf7mq1x"
-                    class="btn btn-primary"
-                    style="flex: 1; min-width: 140px; text-align: center"
-                    target="_blank"
-                    rel="noopener"
-                    >Register on Luma</a
-                >
-                <a
-                    href="{{ get_url(path='events/road-to-mainnet-1-bangkok') }}"
-                    class="btn btn-outline"
-                    style="
-                        flex: 1;
-                        min-width: 140px;
-                        text-align: center;
-                        border-color: var(--solana-green);
-                        color: var(--solana-green);
-                    "
-                    >Event Details</a
-                >
-            </div>
-        </div>
-
-        <!-- Completed Jan 28 Event Card -->
-        <div class="glass-card event-highlight" style="opacity: 0.85">
-            <span
-                class="status-badge"
-                style="
-                    margin-bottom: 1rem;
-                    background: rgba(153, 69, 255, 0.08);
-                    border-color: var(--solana-purple);
-                    color: var(--solana-purple);
-                "
-                >✅ Completed: Jan 28</span
-            >
+            <span class="status-badge active" style="margin-bottom: 1rem;">Live Event: Jan 28</span>
             <h3>Rust & AI Seminar</h3>
-            <p>
-                Exclusive session with experts from Solana Foundation and the
-                local community at ICT Mahidol.
-            </p>
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap">
-                <a
-                    href="https://www.youtube.com/watch?v=KHYwV8qtMys"
-                    class="btn btn-outline"
-                    style="
-                        flex: 1;
-                        min-width: 120px;
-                        text-align: center;
-                        border-color: var(--solana-purple);
-                        color: var(--solana-purple);
-                    "
-                    target="_blank"
-                    rel="noopener"
-                    >🎬 Recording</a
-                >
-                <a
-                    href="{{ get_url(path='events/muict-event-2026') }}"
-                    class="btn btn-outline"
-                    style="flex: 1; min-width: 120px; text-align: center"
-                    >Event Details</a
-                >
-            </div>
+            <p>Exclusive session with experts from Solana Foundation and the local community at ICT Mahidol.</p>
+            <a href="{{ get_url(path='muict-event-2026') }}" class="btn btn-outline"
+                style="border-color: var(--solana-green); color: var(--solana-green);">Seminar Details</a>
         </div>
-
         <div class="glass-card">
             <h3>Rules of Engagement</h3>
-            <p>
-                Commitment over Hype. Stake to verify your intent and prove your
-                skills through code.
-            </p>
-            <a href="{{ get_url(path='rules') }}" class="btn btn-outline"
-                >View Rules</a
-            >
+            <p>Commitment over Hype. Stake to verify your intent and prove your skills through code.</p>
+            <a href="{{ get_url(path='rules') }}" class="btn btn-outline">View Rules</a>
         </div>
         <div class="glass-card">
             <h3>Quest Board</h3>
-            <p>
-                Choose your path. Complete hands-on quests to earn reputation
-                and unlock the ecosystem.
-            </p>
-            <a href="{{ get_url(path='quests') }}" class="btn btn-outline"
-                >Browse Quests</a
-            >
+            <p>Choose your path. Complete hands-on quests to earn reputation and unlock the ecosystem.</p>
+            <a href="{{ get_url(path='quests') }}" class="btn btn-outline">Browse Quests</a>
         </div>
         <div class="glass-card">
             <h3>Leaderboard</h3>
-            <p>
-                Reputation is Currency. Track the proof-of-work of our top
-                shippable builders.
-            </p>
-            <a href="{{ get_url(path='leaderboard') }}" class="btn btn-outline"
-                >Check Ranks</a
-            >
+            <p>Reputation is Currency. Track the proof-of-work of our top shippable builders.</p>
+            <a href="{{ get_url(path='leaderboard') }}" class="btn btn-outline">Check Ranks</a>
         </div>
         <div class="glass-card">
             <h3>2026 Roadmap</h3>
-            <p>
-                The Path Ahead. Explore our strategic milestones for growing the
-                Solana builder ecosystem in Thailand.
+            <p>The Path Ahead. Explore our strategic milestones for growing the Solana builder ecosystem in Thailand.
             </p>
-            <a href="{{ get_url(path='roadmap') }}" class="btn btn-outline"
-                >Explore Roadmap</a
-            >
+            <a href="{{ get_url(path='roadmap') }}" class="btn btn-outline">Explore Roadmap</a>
         </div>
     </div>
+
 </section>
 {% endblock content %}

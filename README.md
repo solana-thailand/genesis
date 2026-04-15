@@ -78,11 +78,10 @@ Our journey to empower the next generation of Solana builders in Thailand.
 
 ### 📅 Q1: The Foundation & Launch
 * **Genesis Launch:** Official deployment of the Genesis Documentation & Governance framework.
-* **ICT Workshop (Jan 28) ✅ Completed:** Our first hands-on builder event at MUICT to onboard the "Alpha Class." ([Recording](https://www.youtube.com/watch?v=KHYwV8qtMys))
+* **ICT Workshop (Jan 28):** Our first hands-on builder event at MUICT to onboard the "Alpha Class."
 * **Level 0 & 1 Quests:** Official rollout of the first builder challenges and reputation tracking.
 
 ### 📅 Q2: On-chain Governance & Automation
-* **Road to Mainnet #1 (Apr 26):** Solana x AI Builders — Deep dive into Rust, AI Agents, and the Solana Ecosystem at ContributeDAO, Bangkok. ([Register on Luma](https://luma.com/vaf7mq1x))
 * **Treasury Integration:** Migration of the community fund to a Multi-sig/DAO structure (evaluating Squads/Realms).
 * **Discord Integration:** Automated role-syncing based on GitHub contribution history and Rank.
 * **Quest Expansion:** Introduction of Level 2+ specialized tracks (DeFi, Gaming, Infrastructure).

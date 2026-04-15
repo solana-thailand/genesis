@@ -23,7 +23,6 @@
 
   <link rel="stylesheet" href="{{ get_url(path='main.css') }}">
   <link rel="icon" href="{{ get_url(path='favicon.ico') }}" type="image/png">
-  {% block extra_head %}{% endblock extra_head %}
 </head>
 
 <body>
@@ -38,14 +37,18 @@
         </li>
       </ul>
       <ul class="nav-links">
-        <li><a href="{{ get_url(path='events') }}" {% if current_path=='/events/' %}class="active" {% endif
-            %}>Events</a></li>
-        <li><a href="{{ get_url(path='quests') }}" {% if current_path=='/quests/' %}class="active" {% endif
-            %}>Quests</a></li>
-        <li><a href="{{ get_url(path='rules') }}" {% if current_path=='/rules/' %}class="active" {% endif
-            %}>Rules</a></li>
+        <li><a href="{{ get_url(path='rules') }}" {% if current_path=='/rules/' %}class="active" {% endif %}>Rules</a>
+        </li>
         <li><a href="{{ get_url(path='roadmap') }}" {% if current_path=='/roadmap/' %}class="active" {% endif
             %}>Roadmap</a></li>
+        <li><a href="{{ get_url(path='quests') }}" {% if current_path=='/quests/' %}class="active" {% endif
+            %}>Quests</a></li>
+        <li><a href="{{ get_url(path='treasury') }}" {% if current_path=='/treasury/' %}class="active" {% endif
+            %}>Treasury</a></li>
+        <li><a href="{{ get_url(path='leaderboard') }}" {% if current_path=='/leaderboard/' %}class="active" {% endif
+            %}>Leaderboard</a></li>
+        <li><a href="{{ get_url(path='muict-event-2026') }}" {% if current_path=='/muict-event-2026/' %}class="active"
+            {% endif %}>ICT @ Mahidol 2026</a></li>
         <li><a href="https://discord.gg/PGbUgNmsns" target="_blank" class="discord-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
               viewBox="0 0 33.867 33.867">
@@ -173,9 +176,8 @@
           <li><a href="{{ get_url(path='rules') }}">Rules of Engagement</a></li>
           <li><a href="{{ get_url(path='roadmap') }}">2026 Roadmap</a></li>
           <li><a href="{{ get_url(path='quests') }}">Quest Board</a></li>
-          <li><a href="{{ get_url(path='events') }}">Events</a></li>
           <li><a href="{{ get_url(path='leaderboard') }}">Leaderboard</a></li>
-
+          <li><a href="{{ get_url(path='muict-event-2026') }}">ICT @ Mahidol 2026</a></li>
         </ul>
       </div>
 
