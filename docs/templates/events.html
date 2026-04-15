@@ -283,7 +283,9 @@ block #} {% endblock header %} {% block content %}
                 >
                 {% endif %}
 
-                <a href="{{ page.path }}" class="btn btn-outline">Details</a>
+                <a href="{{ get_url(path=page.path) }}" class="btn btn-outline"
+                    >Details</a
+                >
             </div>
         </div>
     </div>
