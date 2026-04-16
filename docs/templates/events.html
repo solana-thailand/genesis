@@ -224,9 +224,9 @@ block #} {% endblock header %} {% block content %}
     {% for page in section.pages %}
     <div class="event-card glass-card">
         {% if page.extra.event_status == "completed" %}
-        <span class="card-badge badge-done">✅ Completed</span>
+        <span class="card-badge badge-done">Completed</span>
         {% elif page.extra.event_status == "upcoming" %}
-        <span class="card-badge badge-live">🔥 Upcoming</span>
+        <span class="card-badge badge-live">Upcoming</span>
         {% else %}
         <span class="card-badge">Event</span>
         {% endif %} {% if page.extra.poster_image %}
@@ -246,11 +246,11 @@ block #} {% endblock header %} {% block content %}
 
             <div class="card-meta">
                 {% if page.extra.event_date %}
-                <span>📅 {{ page.extra.event_date }}</span>
+                <span>{{ page.extra.event_date }}</span>
                 {% endif %} {% if page.extra.event_time %}
-                <span>🕐 {{ page.extra.event_time }}</span>
+                <span>{{ page.extra.event_time }}</span>
                 {% endif %} {% if page.extra.venue_name %}
-                <span>📍 {{ page.extra.venue_name }}</span>
+                <span>{{ page.extra.venue_name }}</span>
                 {% endif %}
             </div>
 
@@ -279,7 +279,7 @@ block #} {% endblock header %} {% block content %}
                     "
                     target="_blank"
                     rel="noopener"
-                    >🎬 Recording</a
+                    >Recording</a
                 >
                 {% endif %}
 
