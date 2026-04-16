@@ -24,7 +24,7 @@ speakers = [
     { name = "Mr. Gui Bibeau", role = "Special Guest", role_type = "primary", org = "Head of Education @ Solana Foundation", image = "gui-bibeau.jpg", social_links = { twitter = "https://x.com/GuiBibeau/" } },
     { name = "Mr. Todsaporn Banjerdkit", role = "Lead Speaker", role_type = "secondary", org = "(Katopz)<br>Rustaceans, AI / Solana Developer<br>Founder – Noob learning<br>CTO Maxion Game<br>Former Data Engineer – PeopleDot (Japan)", image = "katopz.jpg", social_links = { twitter = "https://x.com/katopz/" } },
     { name = "Andy", role = "Guest Speaker", role_type = "secondary", org = "Magicblock", image = "andy.jpg", social_links = { twitter = "https://x.com/andyweng_" }, description = "DevRel at Magicblock" },
-    { name = "Tommy Nguyen", role = "Panelist", role_type = "secondary", org = "Superteam Canada", image = "logo.png", social_links = { twitter = "https://x.com/Tomietv" } }
+    { name = "Tommy Nguyen", role = "Panelist", role_type = "secondary", org = "Superteam Canada", image = "tommy.jpg", social_links = { twitter = "https://x.com/Tomietv" } }
 ]
 +++
 
