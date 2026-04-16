@@ -22,10 +22,10 @@ perks = [
     "Networking with Builders & Partners"
 ]
 speakers = [
-    { name = "Katopz", role = "Rust, AI & Gaming (Ep. 2)", role_type = "primary", org = "Solana Developer Thailand Leader", image = "katopz.jpg" },
-    { name = "Golf", role = "NFT Engine Workshop", role_type = "secondary", org = "ByteCat", image = "logo.png" },
-    { name = "Andy", role = "Ephemeral Rollups", role_type = "secondary", org = "Magicblock", image = "logo.png" },
-    { name = "Chaerin", role = "APAC Ecosystem Spotlight", role_type = "secondary", org = "Solana Foundation", image = "logo.png" }
+    { name = "Katopz", role = "Rust, AI & Gaming (Ep. 2)", role_type = "primary", org = "Solana Developer Thailand Leader", image = "katopz.jpg", social_links = { twitter = "https://x.com/katopz/" } },
+    { name = "Golf", role = "NFT Engine Workshop", role_type = "secondary", org = "ByteCat", image = "golf.jpg", social_links = { twitter = "https://x.com/pawsengineer" } },
+    { name = "Andy", role = "Ephemeral Rollups", role_type = "secondary", org = "Magicblock", image = "andy.jpg", social_links = { twitter = "https://x.com/andyweng_" }, description = "DevRel at Magicblock" },
+    { name = "Chaerin", role = "APAC Ecosystem Spotlight", role_type = "secondary", org = "Solana Foundation", image = "chaerin.jpg", social_links = { twitter = "https://x.com/decentra1ized_", linkedin = "https://www.linkedin.com/in/chaerin-kim-decentra1ized" }, description = "Developer Relations at the Solana Foundation for the past 3 years. Recently focusing on cross-chain migration and institution-facing solutions in APAC." }
 ]
 +++
 
