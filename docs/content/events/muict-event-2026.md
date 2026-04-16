@@ -21,8 +21,10 @@ perks = [
     "3 Hours Digital Literacy (AT)"
 ]
 speakers = [
-    { name = "Mr. Gui Bibeau", role = "Special Guest", role_type = "primary", org = "Head of Education @ Solana Foundation", image = "gui-bibeau.jpg" },
-    { name = "Mr. Todsaporn Banjerdkit", role = "Lead Speaker", role_type = "secondary", org = "(Katopz)<br>Rustaceans, AI / Solana Developer<br>Founder – Noob learning<br>CTO Maxion Game<br>Former Data Engineer – PeopleDot (Japan)", image = "katopz.jpg" }
+    { name = "Mr. Gui Bibeau", role = "Special Guest", role_type = "primary", org = "Head of Education @ Solana Foundation", image = "gui-bibeau.jpg", social_links = { twitter = "https://x.com/GuiBibeau/" } },
+    { name = "Mr. Todsaporn Banjerdkit", role = "Lead Speaker", role_type = "secondary", org = "(Katopz)<br>Rustaceans, AI / Solana Developer<br>Founder – Noob learning<br>CTO Maxion Game<br>Former Data Engineer – PeopleDot (Japan)", image = "katopz.jpg", social_links = { twitter = "https://x.com/katopz/" } },
+    { name = "Andy", role = "Guest Speaker", role_type = "secondary", org = "Magicblock", image = "andy.jpg", social_links = { twitter = "https://x.com/andyweng_" }, description = "DevRel at Magicblock" },
+    { name = "Tommy Nguyen", role = "Panelist", role_type = "secondary", org = "Superteam Canada", image = "logo.png", social_links = { twitter = "https://x.com/Tomietv" } }
 ]
 +++
 
@@ -35,13 +37,34 @@ This event has concluded. Check out the resources below:
 
 ---
 
+### Event Summary
+
+On January 28, 2026, the Faculty of Information and Communication Technology, Mahidol University (ICT Mahidol), in collaboration with Solana in Thailang, organized an academic seminar titled "Modern Systems & AI Integration with Rust: Building the Future on Solana" for faculty members, staff, students of Mahidol University, and general public. The seminar was presided over by Dr. Petch Sajjacholapunt, Deputy Dean for Administration and Human Resource, and was supported and co-organized by Mr. Ratchapon Pockathum, Founder of Solana in Thailang and an ICT alumnus (Batch 11). The event took place in Room IT331, 3rd floor, ICT Building, Mahidol University, Salaya Campus.
+
+On this occasion, Mr. Todsaporn Banjerdkit, Founder of Noob Learning, served as a guest speaker and shared his expertise on the Rust programming language. Key topics included:
+
+- **Tech Revolution**: Why Rust has become one of the programming languages chosen by leading global companies, with an emphasis on safe and high-performance memory management as a foundation for AI and blockchain systems.
+- **Deep Dive – Solana Architecture & AI Integration**: An in-depth exploration of Solana architecture from a developer's perspective, including the concept of on-chain AI agents.
+- **High-Performance Coding Concepts (Hands-on)**: An introduction to fundamental programming concepts using Rust.
+- **Career Path & Global Opportunities**: Guidance on career pathways and global opportunities, including community engagement, funding opportunities, and participation in international competitions and activities.
+
+Toward the conclusion of the seminar, a special panel discussion titled "Building the Future of Solana in Thailand" took place, featuring Mr. Gui Bibeau (Head of Education at the Solana Foundation), Mr. Andy Weng (MagicBlock), and Mr. Tommy Nguyen (Superteam Canada). The discussion provided valuable perspectives on future directions and opportunities for Solana's development in Thailand.
+
+For more details, see the [full Facebook post](https://www.facebook.com/100064671884597/posts/1344175627748154) about the event.
+
+---
+
+### Partners
+
+- **Solana in Thailang**: [Facebook](https://www.facebook.com/SolanaThailang) | [Twitter](https://x.com/SolanaThailang)
+
 ### Agenda
 
 - **13:00 – 13:10**: Opening & Welcome (Introduction of Guest from Solana Foundation)
 - **13:10 – 14:30**: Session Part 1: Modern Systems & Rust (by Katopz)
 - **14:30 – 14:45**: Zero-Waste Break (Networking & Coffee Break)
 - **14:45 – 15:30**: Session Part 2: Hands-on Solana Playground (by Katopz)
-- **15:30 – 15:50**: Special Fireside Chat: "Building the Future of Solana in Thailand" (Katopz x Gui Bibeau)
+- **15:30 – 15:50**: Special Panel Discussion: "Building the Future of Solana in Thailand" (Gui Bibeau x Andy Weng x Tommy Nguyen)
 - **15:50 – 16:00**: Q&A, Photo Session
 
 ---
