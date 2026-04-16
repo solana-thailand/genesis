@@ -60,7 +60,7 @@ Join us for the first series of **"The Road to Mainnet."** This session focuses 
 
 ---
 
-### 📍 Location
+### Location
 
 **ContributeDAO (CDAO)**, ชั้น 3 ตึก CP Tower พญาไท
 
@@ -68,7 +68,7 @@ Join us for the first series of **"The Road to Mainnet."** This session focuses 
 
 ---
 
-### 🤝 Partners
+### Partners
 
 - **Venue Sponsor**: [ContributeDAO (CDAO)](https://contributedao.com/) — สนับสนุนสถานที่จัดงาน ณ ตึก CP Tower พญาไท
 - **Event Partner**: Solana Thailand DAO — ร่วมขับเคลื่อนและสนับสนุนการจัดกิจกรรมเพื่อ Builders
@@ -87,9 +87,9 @@ Join us for the first series of **"The Road to Mainnet."** This session focuses 
 
 ### Register Now
 
-👉 **[Register on Luma](https://luma.com/vaf7mq1x)**
+**[Register on Luma](https://luma.com/vaf7mq1x)**
 
-เจอกันครับทุกคน — See you folks 😊🙏🇹🇭
+เจอกันครับทุกคน — See you folks
 
 ---
 

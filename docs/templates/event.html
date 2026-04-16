@@ -3,7 +3,7 @@ inside the content block #} {% endblock header %} {% block content %}
 <div class="event-container">
     <div class="event-hero">
         {% if page.extra.event_status == "completed" %}
-        <div class="badge-event badge-completed">✅ Event Completed</div>
+        <div class="badge-event badge-completed">Event Completed</div>
         {% else %}
         <div class="badge-event">Exclusive Seminar</div>
         {% endif %}
@@ -56,7 +56,7 @@ inside the content block #} {% endblock header %} {% block content %}
                 target="_blank"
                 rel="noopener"
             >
-                🎬 Watch Recording
+                Watch Recording
             </a>
             {% endif %} {% if page.extra.slides_url %}
             <a
@@ -65,7 +65,7 @@ inside the content block #} {% endblock header %} {% block content %}
                 target="_blank"
                 rel="noopener"
             >
-                📑 View Slides
+                View Slides
             </a>
             {% endif %}
         </div>
@@ -93,7 +93,7 @@ inside the content block #} {% endblock header %} {% block content %}
         {% endif %} {% if page.extra.gallery_image %}
         <!-- Group Photo Gallery -->
         <div class="gallery-section">
-            <h3>📸 Event Highlights</h3>
+            <h3>Event Highlights</h3>
             <div class="gallery-frame">
                 <img
                     src="{{ get_url(path=page.extra.gallery_image) }}"
@@ -108,7 +108,7 @@ inside the content block #} {% endblock header %} {% block content %}
     <div class="event-details grid">
         {% if page.extra.event_date %}
         <div class="glass-card">
-            <h3>📅 Date & Time</h3>
+            <h3>Date & Time</h3>
             <p>
                 {{ page.extra.event_date }}<br />{{ page.extra.event_time |
                 default(value="") }}
@@ -116,7 +116,7 @@ inside the content block #} {% endblock header %} {% block content %}
         </div>
         {% endif %} {% if page.extra.venue_name %}
         <div class="glass-card">
-            <h3>📍 Venue</h3>
+            <h3>Venue</h3>
             <p>
                 {{ page.extra.venue_name }}<br />{{ page.extra.venue_location |
                 default(value="") }}
@@ -124,7 +124,7 @@ inside the content block #} {% endblock header %} {% block content %}
         </div>
         {% endif %} {% if page.extra.perks %}
         <div class="glass-card">
-            <h3>💎 Perks</h3>
+            <h3>Perks</h3>
             <p>
                 {% for perk in page.extra.perks %} {{ perk }}{% if not loop.last
                 %}<br />{% endif %} {% endfor %}
@@ -786,7 +786,7 @@ inside the content block #} {% endblock header %} {% block content %}
                 if (countdownEl) countdownEl.style.display = "none";
                 const statusEl = document.getElementById("event-status");
                 if (statusEl) {
-                    statusEl.innerHTML = "🚀 EVENT IS LIVE!";
+                    statusEl.innerHTML = "EVENT IS LIVE!";
                     statusEl.style.color = "var(--solana-purple)";
                 }
                 return;

@@ -26,12 +26,12 @@ speakers = [
 ]
 +++
 
-### 📺 Event Recording & Resources
+### Event Recording & Resources
 
 This event has concluded. Check out the resources below:
 
-- **🎬 Full Recording**: [Watch on YouTube](https://www.youtube.com/watch?v=KHYwV8qtMys)
-- **📑 Presentation Slides**: [View on Google Slides](https://docs.google.com/presentation/d/1b9R6_dKeOMj7tlQp4jtDC5DX_4FCI5I5bXqLPf0XmW8/edit)
+- **Full Recording**: [Watch on YouTube](https://www.youtube.com/watch?v=KHYwV8qtMys)
+- **Presentation Slides**: [View on Google Slides](https://docs.google.com/presentation/d/1b9R6_dKeOMj7tlQp4jtDC5DX_4FCI5I5bXqLPf0XmW8/edit)
 
 ---
 
@@ -46,7 +46,7 @@ This event has concluded. Check out the resources below:
 
 ---
 
-### 📘 Course Outline
+### Course Outline
 
 The goal is to provide students with an overview of building high-performance systems and their application to international careers.
 
