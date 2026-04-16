@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solana Thailand Genesis</title>
+  <meta name="description" content="The Digital HQ for Solana Builders in Thailand. Stake, Build, Earn.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https:&#x2F;&#x2F;solana-thailand.github.io&#x2F;genesis&#x2F;">
+  <meta property="og:title" content="Solana Thailand Genesis">
+  <meta property="og:description" content="The Digital HQ for Solana Builders in Thailand. Stake, Build, Earn.">
+  <meta property="og:image" content="https://solana-thailand.github.io/genesis/logo.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https:&#x2F;&#x2F;solana-thailand.github.io&#x2F;genesis&#x2F;">
+  <meta property="twitter:title" content="Solana Thailand Genesis">
+  <meta property="twitter:description" content="The Digital HQ for Solana Builders in Thailand. Stake, Build, Earn.">
+  <meta property="twitter:image" content="https://solana-thailand.github.io/genesis/logo.png">
+
+  <link rel="stylesheet" href="https://solana-thailand.github.io/genesis/main.css">
+  <link rel="icon" href="https://solana-thailand.github.io/genesis/favicon.ico" type="image/png">
+  
+<style>
+    .journey-hero {
+        text-align: center;
+        padding: 4rem 0 2rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .journey-hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 0.5rem;
+        background: linear-gradient(
+            135deg,
+            var(--solana-green),
+            var(--solana-blue)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .journey-subtitle {
+        font-size: 1.5rem;
+        color: var(--text-secondary);
+        margin-bottom: 0.5rem;
+        font-weight: 300;
+    }
+
+    .journey-flag {
+        font-size: 4rem;
+        margin-top: 1rem;
+        animation: wave 2s ease-in-out infinite;
+    }
+
+    @keyframes wave {
+        0%,
+        100% {
+            transform: rotate(0deg);
+        }
+        25% {
+            transform: rotate(-5deg);
+        }
+        75% {
+            transform: rotate(5deg);
+        }
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin: 3rem 0 2rem;
+        color: var(--solana-green);
+        text-align: center;
+    }
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+
+    .team-card {
+        padding: 2rem;
+        border: 1px solid var(--glass-border);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.02);
+        transition:
+            transform 0.3s,
+            border-color 0.3s;
+    }
+
+    .team-card:hover {
+        transform: translateY(-8px);
+        border-color: var(--solana-purple);
+        box-shadow: 0 10px 30px rgba(153, 69, 255, 0.15);
+        background: rgba(255, 255, 255, 0.04);
+    }
+
+    .team-card h3 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        color: var(--solana-green);
+    }
+
+    .team-card .role {
+        font-size: 1rem;
+        color: var(--text-dim);
+        margin-bottom: 1rem;
+        font-style: italic;
+    }
+
+    .team-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .team-card li {
+        padding: 0.5rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+        color: var(--text-secondary);
+    }
+
+    .team-card li::before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        color: var(--solana-green);
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+
+    .project-card {
+        padding: 1.5rem;
+        border: 1px solid var(--glass-border);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.02);
+    }
+
+    .project-card h4 {
+        font-size: 1.3rem;
+        color: var(--solana-blue);
+        margin-bottom: 0.75rem;
+    }
+
+    .project-card p {
+        color: var(--text-secondary);
+        line-height: 1.6;
+    }
+
+    .tech-stack {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .tech-card {
+        padding: 1.5rem;
+        border: 1px solid var(--glass-border);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.02);
+    }
+
+    .tech-card h4 {
+        font-size: 1.2rem;
+        color: var(--solana-purple);
+        margin-bottom: 1rem;
+    }
+
+    .tech-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .tech-card li {
+        padding: 0.3rem 0;
+        color: var(--text-secondary);
+    }
+
+    .timeline {
+        position: relative;
+        margin: 3rem 0;
+        padding-left: 3rem;
+    }
+
+    .timeline::before {
+        content: "";
+        position: absolute;
+        left: 1rem;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: linear-gradient(
+            to bottom,
+            var(--solana-green),
+            var(--solana-purple),
+            var(--solana-blue),
+            var(--solana-green)
+        );
+        filter: drop-shadow(0 0 5px rgba(20, 241, 149, 0.3));
+    }
+
+    .timeline-item {
+        position: relative;
+        margin-bottom: 3rem;
+        padding-left: 2rem;
+    }
+
+    .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -2.4rem;
+        top: 0.5rem;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background: var(--solana-green);
+        border: 2px solid var(--bg-dark);
+        box-shadow: 0 0 0 3px rgba(20, 241, 149, 0.2);
+    }
+
+    .timeline-item:nth-child(4n)::before {
+        background: var(--solana-purple);
+        box-shadow: 0 0 0 3px rgba(153, 69, 255, 0.2);
+    }
+
+    .timeline-item:nth-child(4n + 2)::before {
+        background: var(--solana-blue);
+        box-shadow: 0 0 0 3px rgba(0, 200, 255, 0.2);
+    }
+
+    .timeline-date {
+        font-size: 0.9rem;
+        color: var(--solana-green);
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+
+    .timeline-title {
+        font-size: 1.3rem;
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline-desc {
+        color: var(--text-secondary);
+        line-height: 1.6;
+    }
+
+    .timeline-year {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--solana-purple);
+        margin: 2rem 0 1rem;
+        padding-left: 2rem;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .stat-card {
+        padding: 2.5rem 2rem;
+        border: 1px solid var(--glass-border);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.02);
+        text-align: center;
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .stat-card:hover {
+        transform: scale(1.02);
+        border-color: var(--solana-green);
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: var(--solana-green);
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-growth {
+        font-size: 0.9rem;
+        color: var(--solana-purple);
+    }
+
+    .stat-growth.positive {
+        color: var(--solana-green);
+    }
+
+    .join-section {
+        text-align: center;
+        margin: 3rem 0;
+    }
+
+    .social-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.5rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .social-card {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.75rem 2rem;
+        border-radius: 16px;
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0.03);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .social-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            transparent 100%
+        );
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    .social-card:hover::before {
+        opacity: 1;
+    }
+
+    .social-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .social-icon-wrapper {
+        flex-shrink: 0;
+        width: 72px;
+        height: 72px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.1);
+        transition: all 0.4s ease;
+    }
+
+    .social-card:hover .social-icon-wrapper {
+        transform: scale(1.1);
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    .social-facebook .social-icon-wrapper {
+        background: linear-gradient(
+            135deg,
+            rgba(24, 119, 242, 0.3) 0%,
+            rgba(13, 101, 217, 0.2) 100%
+        );
+    }
+
+    .social-discord .social-icon-wrapper {
+        background: linear-gradient(
+            135deg,
+            rgba(88, 101, 242, 0.3) 0%,
+            rgba(71, 82, 196, 0.2) 100%
+        );
+    }
+
+    .social-icon-wrapper svg {
+        display: block;
+        margin: 0 auto;
+        max-width: 52px;
+        max-height: 52px;
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    }
+
+    /* Explicit max sizes to balance visual weight between icons.
+       Facebook uses a simpler "f" mark so allow a larger max; Discord
+       mascot art is heavier so keep its max smaller. */
+    /* Balanced icon sizes */
+    .social-facebook .social-icon-wrapper svg {
+        max-width: 48px;
+        max-height: 48px;
+    }
+
+    .social-discord .social-icon-wrapper svg {
+        max-width: 44px;
+        max-height: 44px;
+    }
+
+    .social-content {
+        flex: 1;
+        z-index: 1;
+    }
+
+    .social-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 0 0.5rem 0;
+        color: white;
+        transition: transform 0.3s ease;
+    }
+
+    .social-card:hover .social-title {
+        transform: translateX(5px);
+    }
+
+    .social-description {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.7);
+        margin: 0 0 0.75rem 0;
+        font-weight: 400;
+    }
+
+    .social-member-count {
+        display: inline-block;
+        font-size: 0.875rem;
+        font-weight: 600;
+        padding: 0.35rem 0.75rem;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.9);
+        transition: all 0.3s ease;
+    }
+
+    .social-card:hover .social-member-count {
+        background: rgba(255, 255, 255, 0.15);
+        transform: scale(1.05);
+    }
+
+    .social-arrow {
+        font-size: 2rem;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.5);
+        transition: all 0.4s ease;
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    .social-card:hover .social-arrow {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .social-facebook:hover {
+        border-color: rgba(24, 119, 242, 0.5);
+        box-shadow: 0 20px 40px rgba(24, 119, 242, 0.2);
+    }
+
+    .social-facebook:hover .social-title {
+        color: #4a9eff;
+    }
+
+    .social-discord:hover {
+        border-color: rgba(88, 101, 242, 0.5);
+        box-shadow: 0 20px 40px rgba(88, 101, 242, 0.2);
+    }
+
+    .social-discord:hover .social-title {
+        color: #8c9eff;
+    }
+
+    @media (max-width: 768px) {
+        .social-cards {
+            grid-template-columns: 1fr;
+        }
+
+        .social-card {
+            padding: 1.5rem;
+            gap: 1rem;
+        }
+
+        .social-icon-wrapper {
+            width: 60px;
+            height: 60px;
+        }
+
+        .social-icon-wrapper svg {
+            width: 36px;
+            height: 36px;
+        }
+
+        .social-title {
+            font-size: 1.3rem;
+        }
+    }
+
+    .join-subtitle {
+        text-align: center;
+        font-size: 1.2rem;
+        color: var(--text-secondary);
+        margin: 2rem 0 1rem 0;
+    }
+
+    .looking-forward {
+        padding: 2rem;
+        border: 1px solid var(--glass-border);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.02);
+        margin: 3rem 0;
+    }
+
+    .looking-forward h2 {
+        color: var(--solana-green);
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .looking-forward ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+    }
+
+    .looking-forward li {
+        padding: 0.75rem 0;
+        color: var(--text-secondary);
+        font-size: 1.1rem;
+    }
+
+    .looking-forward p {
+        text-align: center;
+        font-size: 1.3rem;
+        color: var(--solana-green);
+        margin-top: 2rem;
+    }
+
+    .intro-text {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: var(--text-secondary);
+        text-align: center;
+        max-width: 800px;
+        margin: 2rem auto;
+    }
+
+    @media (max-width: 768px) {
+        .journey-hero h1 {
+            font-size: 2.5rem;
+        }
+
+        .journey-subtitle {
+            font-size: 1.2rem;
+        }
+
+        .journey-flag {
+            font-size: 3rem;
+        }
+
+        .team-grid,
+        .projects-grid,
+        .tech-stack,
+        .stats-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .join-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .timeline {
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            left: -1.4rem;
+        }
+    }
+</style>
+
+</head>
+
+<body>
+  <nav>
+    <div class="container nav-content">
+      <ul>
+        <li class="brand">
+          <a href="https://solana-thailand.github.io/genesis">
+            <img src="https://solana-thailand.github.io/genesis/logo.png" alt="Solana Thailand Genesis" class="logo" />
+            Solana Thailand Genesis
+          </a>
+        </li>
+      </ul>
+      <ul class="nav-links">
+        <li><a href="https://solana-thailand.github.io/genesis/events" >Events</a></li>
+        <li><a href="https://solana-thailand.github.io/genesis/quests" >Quests</a></li>
+        <li><a href="https://solana-thailand.github.io/genesis/rules" >Rules</a></li>
+        <li><a href="https://solana-thailand.github.io/genesis/roadmap" >Roadmap</a></li>
+        <li><a href="https://solana-thailand.github.io/genesis/journey" class="active" >Journey</a></li>
+        <li><a href="https://discord.gg/PGbUgNmsns" target="_blank" class="discord-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.103 18.055a.07.07 0 0 0 .026.048 19.98 19.98 0 0 0 5.973 3.076.075.075 0 0 0 .081-.038c.457-.79.874-1.616 1.22-2.474a.075.075 0 0 0-.041-.103 12.84 12.84 0 0 1-1.847-.887.075.075 0 0 1-.008-.124c.123-.09.245-.183.364-.277a.075.075 0 0 1 .082-.008c3.84 1.763 7.994 1.763 11.758 0a.075.075 0 0 1 .082.008c.119.094.241.187.364.277a.075.075 0 0 1-.008.124 12.84 12.84 0 0 1-1.847.887.075.075 0 0 0-.041.103c.346.858.763 1.684 1.22 2.474a.075.075 0 0 0 .081.038 19.967 19.967 0 0 0 5.973-3.076.075.075 0 0 0 .026-.048c.49-5.064-.81-9.576-3.414-13.657a.066.066 0 0 0-.032-.027ZM8.02 15.332c-1.18 0-2.158-1.085-2.158-2.419 0-1.333.955-2.419 2.158-2.419 1.21 0 2.18 1.102 2.158 2.419 0 1.333-.955 2.419-2.158 2.419Zm7.974 0c-1.18 0-2.158-1.085-2.158-2.419 0-1.333.955-2.419 2.158-2.419 1.21 0 2.18 1.102 2.158 2.419 0 1.333-.955 2.419-2.158 2.419Z">
+              </path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    
+    
+    
+    
+    
+    <div class="page-header">
+      <h1>Our Journey</h1>
+      
+      <p>The story of Solana Developer Thailand. Building a thriving community of Rust and Solana developers in Thailand.</p>
+      
+    </div>
+    
+    
+    
+
+    
+<!-- Hero Section -->
+<section class="journey-hero">
+    <h1>
+        Solana Developer Thailand
+    </h1>
+    <p class="journey-subtitle">
+        2023-07-26 → NOW
+    </p>
+    <div class="journey-flag">
+        🇹🇭
+    </div>
+</section>
+
+<!-- Introduction -->
+<p class="intro-text">
+    Solana Developer Thailand started as a passion project to bring together
+    Rust developers and blockchain enthusiasts in Thailand. What began as a
+    small community has grown into a thriving ecosystem of builders, learners,
+    and innovators.
+</p>
+
+<!-- Team Section -->
+<h2 class="section-title">Meet the Team</h2>
+<section class="team-grid">
+    <div class="team-card">
+        <h3>KATOPZ</h3>
+        <p class="role">Founder & Core Contributor</p>
+        <ul>
+            <li>Rustaceans, AI/Solana Developer</li>
+            <li>Founder – Noob Learning</li>
+            <li>CTO Maxion Game</li>
+            <li>Former Data Engineer – PeopleDot (Japan)</li>
+            <li>Expert in Solana, WebAssembly, and AI/ML</li>
+        </ul>
+    </div>
+
+    <div class="team-card">
+        <h3>OZONE</h3>
+        <p class="role">Community Organizer</p>
+        <ul>
+            <li>Joined the community in 2025</li>
+            <li>Started helping organize dev events in 2026</li>
+            <li>Supports community growth and developer education</li>
+            <li>Assists in event coordination and logistics</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<h2 class="section-title">Key Projects & Contributions</h2>
+<section class="projects-grid">
+    <div class="project-card">
+        <h4>Avareum Wallet</h4>
+        <p>
+            Multi-chain Wallet (Chrome Extension)<br />
+            Managed full development lifecycle<br />
+            Integrated solana-web3-wasm and evm-web3-wasm
+        </p>
+    </div>
+
+    <div class="project-card">
+        <h4>CatBoard</h4>
+        <p>
+            Price tracking and auto swap bot<br />
+            Real-time cryptocurrency monitoring<br />
+            Automated trading capabilities
+        </p>
+    </div>
+
+    <div class="project-card">
+        <h4>Solana Cookbook</h4>
+        <p>
+            Added Rust examples<br />
+            Thai language translations<br />
+            Made Solana development accessible to Thai developers
+        </p>
+    </div>
+
+    <div class="project-card">
+        <h4>Solana Rust/Wasm Book</h4>
+        <p>
+            Created comprehensive learning resource<br />
+            Available at:
+            <a
+                href="https://gist.rs"
+                target="_blank"
+                style="color: var(--solana-green)"
+                >https://gist.rs</a
+            ><br />
+            Featured as a success story
+        </p>
+    </div>
+</section>
+
+<!-- Technical Expertise -->
+<h2 class="section-title">Technical Expertise</h2>
+<section class="tech-stack">
+    <div class="tech-card">
+        <h4>DeFi Integration</h4>
+        <ul>
+            <li>
+                <strong>Pyth</strong>: Real-time price feeds and best prices
+            </li>
+            <li><strong>Jupiter</strong>: DEX aggregation and swap routing</li>
+            <li><strong>Orca</strong>: Concentrated liquidity pools</li>
+        </ul>
+    </div>
+
+    <div class="tech-card">
+        <h4>Wallet Development</h4>
+        <ul>
+            <li><strong>solana-web3-wasm</strong>: WebAssembly Solana SDK</li>
+            <li>
+                <strong>evm-web3-wasm</strong>: Ethereum WebAssembly integration
+            </li>
+            <li>Chrome Extension architecture</li>
+            <li>Multi-chain support</li>
+        </ul>
+    </div>
+</section>
+
+<!-- 2023 Side Projects -->
+<h2 class="section-title">2023 Side Projects</h2>
+<section class="projects-grid">
+    <div class="project-card">
+        <h4>Stable Diffusion Web UI Service</h4>
+        <p>
+            AI-powered image generation<br />
+            Web-based interface for Stable Diffusion<br />
+            Served the AI art community
+        </p>
+    </div>
+
+    <div class="project-card">
+        <h4>LLM/RAG Implementation</h4>
+        <p>
+            Large Language Model integration<br />
+            Retrieval-Augmented Generation<br />
+            AI-powered search and knowledge management
+        </p>
+    </div>
+</section>
+
+<!-- Event Timeline -->
+<h2 class="section-title">Event Timeline</h2>
+<section class="timeline">
+    <div class="timeline-year">2023</div>
+
+    <div class="timeline-item">
+        <div class="timeline-date">August 26, 2023</div>
+        <div class="timeline-title">
+            Collab with Solana Vietnam and Cleverse
+        </div>
+        <div class="timeline-desc">
+            Cross-border collaboration and knowledge exchange between Thailand
+            and Vietnam communities
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-date">October 7, 2023</div>
+        <div class="timeline-title">Intro to Rust Solana PDA</div>
+        <div class="timeline-desc">
+            Program Derived Accounts workshop with hands-on development session,
+            covering PDA patterns and best practices
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-date">November 21, 2023</div>
+        <div class="timeline-title">Real World Assets Tokenization Talk</div>
+        <div class="timeline-desc">
+            RWA on Solana deep dive, tokenization strategies, use cases, and
+            regulatory considerations
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-date">December 19, 2023</div>
+        <div class="timeline-title">GenAI meets Web3 on Solana</div>
+        <div class="timeline-desc">
+            AI and blockchain integration, future of AI in decentralized
+            systems, and practical implementation examples
+        </div>
+    </div>
+
+    <div class="timeline-year">2024</div>
+
+    <div class="timeline-item">
+        <div class="timeline-date">2024</div>
+        <div class="timeline-title">Solana Radar Hackathon</div>
+        <div class="timeline-desc">
+            Community participation, building innovative solutions, and
+            showcasing Thai developer talent
+        </div>
+    </div>
+
+    <div class="timeline-year">2025</div>
+
+    <div class="timeline-item">
+        <div class="timeline-date">2025</div>
+        <div class="timeline-title">Solana Breakpoint Hackathon</div>
+        <div class="timeline-desc">
+            Global hackathon participation, networking with international
+            builders, and bringing insights back to Thailand
+        </div>
+    </div>
+
+    <div class="timeline-year">2026</div>
+
+    <div class="timeline-item">
+        <div class="timeline-date">January 28, 2026</div>
+        <div class="timeline-title">Mahidol University ICT Workshop</div>
+        <div class="timeline-desc">
+            "Modern Systems & AI Integration with Rust" - Educational
+            partnership with leading university, onboarding the next generation
+            of builders
+        </div>
+    </div>
+</section>
+
+<!-- Community Statistics -->
+<h2 class="section-title">Community Growth</h2>
+<section class="stats-grid">
+    <div class="stat-card glass-card">
+        <div class="stat-number">1,241</div>
+        <div class="stat-label">Facebook Members (2026)</div>
+        <div class="stat-growth positive">↑ 56% growth from 2023</div>
+    </div>
+    <div class="stat-card glass-card">
+        <div class="stat-number">812</div>
+        <div class="stat-label">Discord Members</div>
+        <div class="stat-growth">High engagement community</div>
+    </div>
+</section>
+
+<p class="join-subtitle">
+    Join our growing community of builders and enthusiasts!
+</p>
+
+<div class="join-section">
+    <div class="social-cards">
+        <a
+            href="https://www.facebook.com/share/g/17q1irJoJB/?mibextid=wwXIfr"
+            target="_blank"
+            class="social-card social-facebook"
+        >
+            <div class="social-icon-wrapper">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="48"
+                    height="48"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"
+                    />
+                </svg>
+            </div>
+            <div class="social-content">
+                <h3 class="social-title">Facebook</h3>
+                <p class="social-description">Join our Facebook group</p>
+                <span class="social-member-count">1,241 members</span>
+            </div>
+            <div class="social-arrow">→</div>
+        </a>
+        <a
+            href="https://discord.com/invite/PGbUgNmsns"
+            target="_blank"
+            class="social-card social-discord"
+        >
+            <div class="social-icon-wrapper">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="44"
+                    height="44"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.103 18.055a.07.07 0 0 0 .026.048 19.98 19.98 0 0 0 5.973 3.076.075.075 0 0 0 .081-.038c.457-.79.874-1.616 1.22-2.474a.075.075 0 0 0-.041-.103 12.84 12.84 0 0 1-1.847-.887.075.075 0 0 1-.008-.124c.123-.09.245-.183.364-.277a.075.075 0 0 1 .082-.008c3.84 1.763 7.994 1.763 11.758 0a.075.075 0 0 1 .082.008c.119.094.241.187.364.277a.075.075 0 0 1-.008.124 12.84 12.84 0 0 1-1.847.887.075.075 0 0 0-.041.103c.346.858.763 1.684 1.22 2.474a.075.075 0 0 0 .081.038 19.967 19.967 0 0 0 5.973-3.076.075.075 0 0 0 .026-.048c.49-5.064-.81-9.576-3.414-13.657a.066.066 0 0 0-.032-.027ZM8.02 15.332c-1.18 0-2.158-1.085-2.158-2.419 0-1.333.955-2.419 2.158-2.419 1.21 0 2.18 1.102 2.158 2.419 0 1.333-.955 2.419-2.158 2.419Zm7.974 0c-1.18 0-2.158-1.085-2.158-2.419 0-1.333.955-2.419 2.158-2.419 1.21 0 2.18 1.102 2.158 2.419 0 1.333-.955 2.419-2.158 2.419Z"
+                    />
+                </svg>
+            </div>
+            <div class="social-content">
+                <h3 class="social-title">Discord</h3>
+                <p class="social-description">Join our Discord server</p>
+                <span class="social-member-count">812 members</span>
+            </div>
+            <div class="social-arrow">→</div>
+        </a>
+    </div>
+</div>
+
+<!-- Looking Forward -->
+<section class="looking-forward">
+    <h2>Looking Forward</h2>
+    <ul>
+        <li>Educating more developers in Solana and Rust</li>
+        <li>Building partnerships across Southeast Asia</li>
+        <li>Launching innovative projects on Solana</li>
+        <li>Representing Thailand on the global Solana stage</li>
+    </ul>
+    <p>Join us in building the future of blockchain in Thailand!</p>
+</section>
+
+<!-- Presentation -->
+<section class="join-section">
+    <h2>Presentation</h2>
+    <p style="text-align: center">
+        View our full journey presentation:
+        <a
+            href="https://docs.google.com/presentation/d/1fVl0ePnPq0e9aLjuwponkaefXr3EQFxcmh2VuIJqPvs/edit?usp=sharing"
+            target="_blank"
+            style="color: var(--solana-green); font-weight: bold"
+            >Solana Developer Thailand Journey</a
+        >
+    </p>
+</section>
+
+
+  </main>
+
+  <section class="aurora-section">
+    <div class="aurora-container">
+      <!-- High speed artistic streaks -->
+      <div class="aurora-streak"
+        style="top: 5%; --streak-color: var(--solana-purple); --streak-delay: 0s; --streak-duration: 3s; --streak-opacity: 0.7; --streak-width: 600px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 15%; --streak-color: var(--solana-green); --streak-delay: -1.5s; --streak-duration: 4.5s; --streak-opacity: 0.5; --streak-width: 400px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 25%; --streak-color: var(--solana-blue); --streak-delay: -4s; --streak-duration: 2.5s; --streak-opacity: 0.6; --streak-width: 800px;">
+      </div>
+
+      <!-- Medium speed artistic streaks -->
+      <div class="aurora-streak"
+        style="top: 35%; --streak-color: var(--solana-purple); --streak-delay: -6s; --streak-duration: 7s; --streak-opacity: 0.4; --streak-width: 500px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 45%; --streak-color: var(--solana-green); --streak-delay: -2.3s; --streak-duration: 6s; --streak-opacity: 0.5; --streak-width: 700px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 55%; --streak-color: var(--solana-blue); --streak-delay: -8.5s; --streak-duration: 8.5s; --streak-opacity: 0.4; --streak-width: 650px;">
+      </div>
+
+      <!-- Slower elegant streaks -->
+      <div class="aurora-streak"
+        style="top: 65%; --streak-color: var(--solana-purple); --streak-delay: -11s; --streak-duration: 12s; --streak-opacity: 0.3; --streak-width: 450px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 75%; --streak-color: var(--solana-green); --streak-delay: -4.5s; --streak-duration: 14s; --streak-opacity: 0.4; --streak-width: 550px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 85%; --streak-color: var(--solana-blue); --streak-delay: -1s; --streak-duration: 10s; --streak-opacity: 0.5; --streak-width: 900px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 95%; --streak-color: var(--solana-purple); --streak-delay: -6s; --streak-duration: 16s; --streak-opacity: 0.3; --streak-width: 600px;">
+      </div>
+
+      <!-- Extra layer for density -->
+      <div class="aurora-streak"
+        style="top: 10%; --streak-color: var(--solana-blue); --streak-delay: -13s; --streak-duration: 4s; --streak-opacity: 0.4; --streak-width: 500px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 30%; --streak-color: var(--solana-purple); --streak-delay: -2s; --streak-duration: 5s; --streak-opacity: 0.5; --streak-width: 350px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 50%; --streak-color: var(--solana-green); --streak-delay: -7.5s; --streak-duration: 3.5s; --streak-opacity: 0.6; --streak-width: 750px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 70%; --streak-color: var(--solana-blue); --streak-delay: -5.2s; --streak-duration: 9s; --streak-opacity: 0.4; --streak-width: 450px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 90%; --streak-color: var(--solana-purple); --streak-delay: -0.5s; --streak-duration: 2.2s; --streak-opacity: 0.6; --streak-width: 300px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 20%; --streak-color: var(--solana-green); --streak-delay: -10s; --streak-duration: 11s; --streak-opacity: 0.3; --streak-width: 550px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 60%; --streak-color: var(--solana-blue); --streak-delay: -3.8s; --streak-duration: 4.8s; --streak-opacity: 0.5; --streak-width: 650px;">
+      </div>
+      <div class="aurora-streak"
+        style="top: 80%; --streak-color: var(--solana-purple); --streak-delay: -12.4s; --streak-duration: 7.5s; --streak-opacity: 0.4; --streak-width: 400px;">
+      </div>
+    </div>
+
+    <div class="discord-cta">
+      <h2>Join the Genesis Community</h2>
+      <p>Connect with other shippable builders, get help with quests, and participate in our meritocratic governance.
+      </p>
+      <a href="https://discord.gg/PGbUgNmsns" target="_blank" class="btn-discord">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.103 18.055a.07.07 0 0 0 .026.048 19.98 19.98 0 0 0 5.973 3.076.075.075 0 0 0 .081-.038c.457-.79.874-1.616 1.22-2.474a.075.075 0 0 0-.041-.103 12.84 12.84 0 0 1-1.847-.887.075.075 0 0 1-.008-.124c.123-.09.245-.183.364-.277a.075.075 0 0 1 .082-.008c3.84 1.763 7.994 1.763 11.758 0a.075.075 0 0 1 .082.008c.119.094.241.187.364.277a.075.075 0 0 1-.008.124 12.84 12.84 0 0 1-1.847.887.075.075 0 0 0-.041.103c.346.858.763 1.684 1.22 2.474a.075.075 0 0 0 .081.038 19.967 19.967 0 0 0 5.973-3.076.075.075 0 0 0 .026-.048c.49-5.064-.81-9.576-3.414-13.657a.066.066 0 0 0-.032-.027ZM8.02 15.332c-1.18 0-2.158-1.085-2.158-2.419 0-1.333.955-2.419 2.158-2.419 1.21 0 2.18 1.102 2.158 2.419 0 1.333-.955 2.419-2.158 2.419Zm7.974 0c-1.18 0-2.158-1.085-2.158-2.419 0-1.333.955-2.419 2.158-2.419 1.21 0 2.18 1.102 2.158 2.419 0 1.333-.955 2.419-2.158 2.419Z" />
+        </svg>
+        Join Discord
+      </a>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="https://solana-thailand.github.io/genesis" class="footer-logo">
+          <img src="https://solana-thailand.github.io/genesis/logo.png" alt="Solana Thailand Genesis" />
+          <span>Solana Thailand Genesis</span>
+        </a>
+        <p class="tagline">"We build the system, the system builds the builders."</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Ecosystem</h4>
+        <ul>
+          <li><a href="https://solana-thailand.github.io/genesis/rules">Rules of Engagement</a></li>
+          <li><a href="https://solana-thailand.github.io/genesis/roadmap">2026 Roadmap</a></li>
+          <li><a href="https://solana-thailand.github.io/genesis/quests">Quest Board</a></li>
+          <li><a href="https://solana-thailand.github.io/genesis/events">Events</a></li>
+          <li><a href="https://solana-thailand.github.io/genesis/leaderboard">Leaderboard</a></li>
+
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Community</h4>
+        <ul>
+          <li><a href="https://solana-thailand.github.io/genesis/treasury">Treasury</a></li>
+          <li><a href="https://github.com/solana-thailand/genesis" target="_blank">GitHub</a></li>
+          <li><a href="https://discord.gg/PGbUgNmsns" target="_blank">Discord</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Solana Thailand Genesis. All rights reserved.</p>
+        <p>Built with <a href="https://www.getzola.org" target="_blank">Zola</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
