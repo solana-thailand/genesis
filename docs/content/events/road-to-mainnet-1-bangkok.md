@@ -16,7 +16,10 @@ venue_location = "CP Tower, Phaya Thai (BTS Phaya Thai / Airport Link)"
 poster_image = "road-to-mainnet-1-poster.jpg"
 recording_url = "https://www.youtube.com/watch?v=vGhI2oxDKjI"
 recording_url_part2 = "https://www.youtube.com/watch?v=PEPDClvLngc"
-gallery_image = "road-to-mainnet-1-group-photo.jpg"
+gallery_images = [
+    "road-to-mainnet-1-group-photo.jpg",
+    "road-to-mainnet-1-group-photo-2.jpg"
+]
 perks = [
     "Hands-on Workshops",
     "Light Snacks Provided",
