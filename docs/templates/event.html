@@ -71,12 +71,33 @@ inside the content block #} {% endblock header %} {% block content %}
         </div>
 
         {% if page.extra.recording_url %}
-        <!-- YouTube Embed -->
+        <!-- YouTube Embed: Part 1 -->
         <div class="video-frame">
             {% set yt_id = page.extra.recording_url | split(pat="v=") | last %}
             <iframe
                 src="https://www.youtube.com/embed/{{ yt_id }}"
-                title="{{ page.title }} Recording"
+                title="{{ page.title }} — Part 1"
+                frameborder="0"
+                allow="
+                    accelerometer;
+                    autoplay;
+                    clipboard-write;
+                    encrypted-media;
+                    gyroscope;
+                    picture-in-picture;
+                "
+                allowfullscreen
+            >
+            </iframe>
+        </div>
+        {% endif %} {% if page.extra.recording_url_part2 %}
+        <!-- YouTube Embed: Part 2 -->
+        <div class="video-frame">
+            {% set yt_id2 = page.extra.recording_url_part2 | split(pat="v=") |
+            last %}
+            <iframe
+                src="https://www.youtube.com/embed/{{ yt_id2 }}"
+                title="{{ page.title }} — Part 2 (Live)"
                 frameborder="0"
                 allow="
                     accelerometer;

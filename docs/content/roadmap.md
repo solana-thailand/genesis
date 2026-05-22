@@ -14,6 +14,9 @@ Our journey to empower the next generation of Solana builders in Thailand.
 * **Level 0 & 1 Quests:** Official rollout of the first builder challenges and reputation tracking.
 
 ### Q2: On-chain Governance & Automation
+* **Road to Mainnet #1 (Apr 26) ✅ Completed:** Solana x AI Builders — Deep dive into Rust, AI Agents, and the Solana Ecosystem at ContributeDAO, Bangkok. ([Part 1](https://www.youtube.com/watch?v=vGhI2oxDKjI) / [Part 2 (Live)](https://www.youtube.com/watch?v=PEPDClvLngc))
+* **Road to Mainnet #2 (May 24):** Rust EP3 & AI Agent Micropayments with x402 — Powered by [BeThere](https://bethere.solana-thailand.workers.dev/) deposit-backed registration at True Digital Park. ([Register](https://bethere.solana-thailand.workers.dev/e/solana-x-ai-builders-the-road-to-mainnet-2-bangkok))
+* **BeThere Integration:** All future events now use [BeThere](https://bethere.solana-thailand.workers.dev/) — a deposit-backed, on-chain event platform for no-show prevention and compressed NFT badges.
 * **Treasury Integration:** Migration of the community fund to a Multi-sig/DAO structure (evaluating Squads/Realms).
 * **Discord Integration:** Automated role-syncing based on GitHub contribution history and Rank.
 * **Quest Expansion:** Introduction of Level 2+ specialized tracks (DeFi, Gaming, Infrastructure).
