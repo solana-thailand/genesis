@@ -946,4 +946,14 @@ inside the content block #} {% endblock header %} {% block content %}
         updateCountdown();
     })();
 </script>
-{% endif %} {% endblock content %}
+{% endif %}
+
+<script>
+    document
+        .querySelectorAll('.event-content a[href^="http"]')
+        .forEach(function (link) {
+            link.setAttribute("target", "_blank");
+            link.setAttribute("rel", "noopener noreferrer");
+        });
+</script>
+{% endblock content %}

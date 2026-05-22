@@ -80,13 +80,13 @@ First session of **"The Road to Mainnet"** series — a technical deep dive for 
 
 ### Location
 
-**[ContributeDAO (CDAO)](https://contributedao.com/)**, 3rd Floor, CP Tower, Phaya Thai
+**ContributeDAO (CDAO)**, 3rd Floor, CP Tower, Phaya Thai
 
 BTS Phaya Thai / Airport Link Phaya Thai
 
 ### Partners
 
-- **Venue**: [ContributeDAO](https://contributedao.com/)
+- **Venue**: ContributeDAO
 - **Event Partner**: Solana Thailand DAO
 - **Global Support**: Magicblock, Solana Foundation
 
