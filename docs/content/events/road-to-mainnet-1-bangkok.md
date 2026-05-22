@@ -16,7 +16,10 @@ venue_location = "CP Tower, Phaya Thai (BTS Phaya Thai / Airport Link)"
 poster_image = "road-to-mainnet-1-poster.jpg"
 recording_url = "https://www.youtube.com/watch?v=vGhI2oxDKjI"
 recording_url_part2 = "https://www.youtube.com/watch?v=PEPDClvLngc"
-gallery_image = "road-to-mainnet-1-group-photo.jpg"
+gallery_images = [
+    "road-to-mainnet-1-group-photo.jpg",
+    "road-to-mainnet-1-group-photo-2.jpg"
+]
 perks = [
     "Hands-on Workshops",
     "Light Snacks Provided",
@@ -32,64 +35,60 @@ speakers = [
 
 ### Event Recordings
 
-- **Part 1 — Workshop & Talks**: [Watch on YouTube](https://www.youtube.com/watch?v=vGhI2oxDKjI)
-- **Part 2 — Live Stream**: [Watch on YouTube](https://www.youtube.com/watch?v=PEPDClvLngc)
+| Part | Link |
+|------|------|
+| Part 1 — Workshop & Talks | [YouTube](https://www.youtube.com/watch?v=vGhI2oxDKjI) |
+| Part 2 — Live Stream | [YouTube](https://www.youtube.com/watch?v=PEPDClvLngc) |
+
+### Speaker Slides
+
+| Speaker | Topic | Slides |
+|---------|-------|--------|
+| Katopz | Rust, AI & Gaming (Ep. 2) | [Google Slides](https://docs.google.com/presentation/d/1HikZEH_mt31sbV93ps-1EiQEJGO6v7RuXT5a4QsRhds/edit?usp=sharing) |
+| Golf | NFT Engine Workshop | [Google Slides](https://docs.google.com/presentation/d/e/2PACX-1vS-t310yXERTs3HeZ1bwGK_i4rSRa3fYdN6899g1YO2e81kOWs8EJ4iRy36d3iiELYuyTYMjS3--Fdd/pub?start=false&loop=false&delayms=3000) |
+| Chaerin | APAC Ecosystem Spotlight | [Google Drive](https://drive.google.com/file/d/15YBHFHpIROSTxOWRMzzipHpGDnhLkEWd/view?usp=sharing) |
 
 ---
 
-### About This Event
+### TL;DR
 
-กลับมาอีกครั้ง! งานรวมตัวนักพัฒนาเพื่อเตรียมความพร้อมสู่โลก Mainnet อย่างมืออาชีพ รอบนี้เราเน้นเนื้อหาเทคนิคเข้มข้นสำหรับสาย AI และ Web3 Builders โดยเฉพาะ
+First session of **"The Road to Mainnet"** series — a technical deep dive for AI and Web3 builders.
 
-Join us for the first series of **"The Road to Mainnet."** This session focuses on high-performance technical insights for AI and Web3 builders.
+4 speakers, 1 venue, hands-on workshops + networking:
 
----
-
-### Highlights
-
-- **Rust/AI/Game**: เจาะลึก Rust สำหรับ AI และ Game (Ep. 2) โดย คุณ Katopz (Solana Developer Thailand Leader)
-- **NFT Engine Workshop**: เรียนรู้วิธีสร้าง NFT บนระบบที่เร็วที่สุด โดย คุณ Golf (ByteCat)
-- **Magicblock Special**: พบกับ Andy (Magicblock) ที่จะมาแชร์ Alpha เรื่อง Ephemeral Rollups และอนาคตของ On-chain Gaming
-- **APAC Spotlight**: อัปเดตโอกาสใหม่ๆ จาก Solana Foundation โดย Chaerin
-- **Networking**: พูดคุยแลกเปลี่ยนไอเดียกับ Builders และ Partners ใน Ecosystem
+1. **Katopz** — Rust for AI & Game Dev (Ep. 2)
+2. **Golf** — Build NFTs on Solana with Metaplex
+3. **Andy** — Ephemeral Rollups & On-chain Gaming (Magicblock)
+4. **Chaerin** — APAC Ecosystem Updates (Solana Foundation)
 
 ---
 
 ### Agenda
 
-- **09:30 – 10:00**: Registration
-- **10:00 – 10:10**: Opening by Solana Developer Thailand & Solana Thailand DAO (Community Roadmap & Intro to the Dev Series)
-- **10:10 – 11:00**: Rust, AI, and Gaming (Ep. 2) by Katopz
-- **11:00 – 11:10**: Group Photo Session
-- **11:10 – 11:40**: Hands-on: Solana Account Model & Building Your First NFT with Metaplex by Golf
-- **11:40 – 11:55**: The Future of On-chain Gaming & Ephemeral Rollups by Andy (Magicblock)
-- **11:55 – 12:10**: APAC Ecosystem Spotlight — Foundation Updates & Opportunities by Chaerin (Solana Foundation)
-- **12:10 – 13:00**: Networking Session
+| Time | Session |
+|------|---------|
+| 09:30 – 10:00 | Registration |
+| 10:00 – 10:10 | Opening — Community Roadmap & Dev Series Intro |
+| 10:10 – 11:00 | Rust, AI & Gaming (Ep. 2) — Katopz |
+| 11:00 – 11:10 | Group Photo |
+| 11:10 – 11:40 | Hands-on: NFT with Metaplex — Golf |
+| 11:40 – 11:55 | Ephemeral Rollups & On-chain Gaming — Andy |
+| 11:55 – 12:10 | APAC Ecosystem Spotlight — Chaerin |
+| 12:10 – 13:00 | Networking |
 
 ---
 
 ### Location
 
-**ContributeDAO (CDAO)**, ชั้น 3 ตึก CP Tower พญาไท
+**ContributeDAO (CDAO)**, 3rd Floor, CP Tower, Phaya Thai
 
-เดินทางสะดวกด้วย **BTS พญาไท** หรือ **Airport Link พญาไท**
-
----
+BTS Phaya Thai / Airport Link Phaya Thai
 
 ### Partners
 
-- **Venue Sponsor**: [ContributeDAO (CDAO)](https://contributedao.com/) — สนับสนุนสถานที่จัดงาน ณ ตึก CP Tower พญาไท
-- **Event Partner**: Solana Thailand DAO — ร่วมขับเคลื่อนและสนับสนุนการจัดกิจกรรมเพื่อ Builders
-- **Global Support**: Magicblock & Solana Foundation
-
----
-
-### Important Notes
-
-- **Seat Confirmation**: เนื่องจากที่นั่งมีจำกัด ทีมงานจะติดต่อกลับไปทางช่องทางที่คุณระบุไว้ (LINE/TG/X) เพื่อยืนยันสิทธิ์และแจ้งขั้นตอนชำระมัดจำ (**500 THB — Fully Refunded at the venue**)
-- **Bring Your Laptop**: สำหรับร่วม Workshop / Recommended for hands-on session
-- **Bring Your Own Bottle**: เพื่อลดการใช้พลาสติก รบกวนผู้เข้าร่วมเตรียมกระบอกน้ำมาเอง โดยทางสถานที่ (ContributeDAO) มีตู้กดน้ำดื่มให้บริการฟรีครับ
-- **Light Snacks**: มีของว่างบริการเล็กน้อยระหว่างงาน
+- **Venue**: ContributeDAO
+- **Event Partner**: Solana Thailand DAO
+- **Global Support**: Magicblock, Solana Foundation
 
 ---
 

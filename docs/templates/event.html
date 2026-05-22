@@ -56,7 +56,16 @@ inside the content block #} {% endblock header %} {% block content %}
                 target="_blank"
                 rel="noopener"
             >
-                Watch Recording
+                Part 1 — Recording
+            </a>
+            {% endif %} {% if page.extra.recording_url_part2 %}
+            <a
+                href="{{ page.extra.recording_url_part2 }}"
+                class="btn btn-primary btn-cta"
+                target="_blank"
+                rel="noopener"
+            >
+                Part 2 — Live
             </a>
             {% endif %} {% if page.extra.slides_url %}
             <a
@@ -111,10 +120,21 @@ inside the content block #} {% endblock header %} {% block content %}
             >
             </iframe>
         </div>
-        {% endif %} {% if page.extra.gallery_image %}
+        {% endif %} {% if page.extra.gallery_images or page.extra.gallery_image
+        %}
         <!-- Group Photo Gallery -->
         <div class="gallery-section">
             <h3>Event Highlights</h3>
+            {% if page.extra.gallery_images %} {% for img in
+            page.extra.gallery_images %}
+            <div class="gallery-frame">
+                <img
+                    src="{{ get_url(path=img) }}"
+                    alt="Event Photo from {{ page.title }}"
+                    class="gallery-photo"
+                />
+            </div>
+            {% endfor %} {% elif page.extra.gallery_image %}
             <div class="gallery-frame">
                 <img
                     src="{{ get_url(path=page.extra.gallery_image) }}"
@@ -122,6 +142,7 @@ inside the content block #} {% endblock header %} {% block content %}
                     class="gallery-photo"
                 />
             </div>
+            {% endif %}
         </div>
         {% endif %} {% endif %}
     </div>
@@ -925,4 +946,14 @@ inside the content block #} {% endblock header %} {% block content %}
         updateCountdown();
     })();
 </script>
-{% endif %} {% endblock content %}
+{% endif %}
+
+<script>
+    document
+        .querySelectorAll('.event-content a[href^="http"]')
+        .forEach(function (link) {
+            link.setAttribute("target", "_blank");
+            link.setAttribute("rel", "noopener noreferrer");
+        });
+</script>
+{% endblock content %}
