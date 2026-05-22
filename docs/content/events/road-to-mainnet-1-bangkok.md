@@ -6,7 +6,7 @@ weight = 5
 
 [extra]
 hide_header = true
-event_status = "upcoming"
+event_status = "completed"
 subtitle = "Deep Dive into Rust, AI Agents, and the Solana Ecosystem"
 event_date = "Sunday, 26 April 2026"
 event_time = "9:30 AM – 1:00 PM"
@@ -14,8 +14,9 @@ countdown_target = "2026-04-26T09:30:00+07:00"
 venue_name = "ContributeDAO (CDAO), 3rd Floor"
 venue_location = "CP Tower, Phaya Thai (BTS Phaya Thai / Airport Link)"
 poster_image = "road-to-mainnet-1-poster.jpg"
-registration_url = "https://luma.com/vaf7mq1x"
-registration_deadline = "Limited Seats"
+recording_url = "https://www.youtube.com/watch?v=vGhI2oxDKjI"
+recording_url_part2 = "https://www.youtube.com/watch?v=PEPDClvLngc"
+gallery_image = "road-to-mainnet-1-group-photo.jpg"
 perks = [
     "Hands-on Workshops",
     "Light Snacks Provided",
@@ -28,6 +29,13 @@ speakers = [
     { name = "Chaerin", role = "APAC Ecosystem Spotlight", role_type = "secondary", org = "Solana Foundation", image = "chaerin.jpg", social_links = { twitter = "https://x.com/decentra1ized_", linkedin = "https://www.linkedin.com/in/chaerin-kim-decentra1ized" }, description = "Developer Relations at the Solana Foundation for the past 3 years. Recently focusing on cross-chain migration and institution-facing solutions in APAC." }
 ]
 +++
+
+### Event Recordings
+
+- **Part 1 — Workshop & Talks**: [Watch on YouTube](https://www.youtube.com/watch?v=vGhI2oxDKjI)
+- **Part 2 — Live Stream**: [Watch on YouTube](https://www.youtube.com/watch?v=PEPDClvLngc)
+
+---
 
 ### About This Event
 
@@ -82,14 +90,6 @@ Join us for the first series of **"The Road to Mainnet."** This session focuses 
 - **Bring Your Laptop**: สำหรับร่วม Workshop / Recommended for hands-on session
 - **Bring Your Own Bottle**: เพื่อลดการใช้พลาสติก รบกวนผู้เข้าร่วมเตรียมกระบอกน้ำมาเอง โดยทางสถานที่ (ContributeDAO) มีตู้กดน้ำดื่มให้บริการฟรีครับ
 - **Light Snacks**: มีของว่างบริการเล็กน้อยระหว่างงาน
-
----
-
-### Register Now
-
-**[Register on Luma](https://luma.com/vaf7mq1x)**
-
-เจอกันครับทุกคน — See you folks
 
 ---
 
