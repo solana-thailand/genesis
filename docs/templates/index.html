@@ -181,6 +181,40 @@ endblock header %} {% block content %}
             </div>
         </div>
 
+        <!-- Weekly Online Series Card -->
+        <div class="glass-card event-highlight">
+            <span class="status-badge active" style="margin-bottom: 1rem"
+                >Weekly · Online</span
+            >
+            <h3>Weekly Online Builder Series</h3>
+            <p>
+                Recurring online talks & hands-on sessions. Deposit-backed
+                registration via BeThere — join from anywhere.
+            </p>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap">
+                <a
+                    href="{{ get_url(path='online-events') }}"
+                    class="btn btn-primary"
+                    style="flex: 1; min-width: 140px; text-align: center"
+                    >View Schedule</a
+                >
+                <a
+                    href="https://bethere.solana-thailand.workers.dev/"
+                    class="btn btn-outline"
+                    style="
+                        flex: 1;
+                        min-width: 140px;
+                        text-align: center;
+                        border-color: var(--solana-green);
+                        color: var(--solana-green);
+                    "
+                    target="_blank"
+                    rel="noopener"
+                    >All Sessions</a
+                >
+            </div>
+        </div>
+
         <div class="glass-card">
             <h3>Rules of Engagement</h3>
             <p>
