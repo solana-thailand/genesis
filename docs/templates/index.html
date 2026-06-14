@@ -181,25 +181,26 @@ endblock header %} {% block content %}
             </div>
         </div>
 
-        <!-- Weekly Online Series Card -->
+        <!-- Events Calendar Card -->
         <div class="glass-card event-highlight">
             <span class="status-badge active" style="margin-bottom: 1rem"
-                >Weekly · Online</span
+                >In-Person + Online</span
             >
-            <h3>Weekly Online Builder Series</h3>
+            <h3>Events Calendar</h3>
             <p>
-                Recurring online talks & hands-on sessions. Deposit-backed
-                registration via BeThere — join from anywhere.
+                Every Solana Thailand event — meetups and online sessions — in
+                one calendar. Subscribe or register on BeThere.
             </p>
             <div style="display: flex; gap: 0.75rem; flex-wrap: wrap">
                 <a
-                    href="{{ get_url(path='online-events') }}"
+                    href="{{ get_url(path='events') }}#calendar"
                     class="btn btn-primary"
                     style="flex: 1; min-width: 140px; text-align: center"
-                    >View Schedule</a
+                    >View Calendar</a
                 >
+                {% if config.extra.calendar_embed %}
                 <a
-                    href="https://bethere.solana-thailand.workers.dev/"
+                    href="{{ config.extra.calendar_embed }}"
                     class="btn btn-outline"
                     style="
                         flex: 1;
@@ -210,8 +211,9 @@ endblock header %} {% block content %}
                     "
                     target="_blank"
                     rel="noopener"
-                    >All Sessions</a
+                    >Subscribe</a
                 >
+                {% endif %}
             </div>
         </div>
 
