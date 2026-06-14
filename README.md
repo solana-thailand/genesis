@@ -83,7 +83,7 @@ Our journey to empower the next generation of Solana builders in Thailand.
 
 ### 📅 Q2: On-chain Governance & Automation
 * **Road to Mainnet #1 (Apr 26) ✅ Completed:** Solana x AI Builders — Deep dive into Rust, AI Agents, and the Solana Ecosystem at ContributeDAO, Bangkok. ([Part 1](https://www.youtube.com/watch?v=vGhI2oxDKjI) / [Part 2 (Live)](https://www.youtube.com/watch?v=PEPDClvLngc))
-* **Road to Mainnet #2 (May 24):** Rust EP3 & AI Agent Micropayments with x402 at True Digital Park. ([Register on BeThere](https://bethere.solana-thailand.workers.dev/e/solana-x-ai-builders-the-road-to-mainnet-2-bangkok))
+* **Road to Mainnet #2 (May 24) ✅ Completed:** Rust EP3 & AI Agent Micropayments with x402 — the first BeThere deposit-backed event at True Digital Park. ([BeThere event page](https://bethere.solana-thailand.workers.dev/e/solana-x-ai-builders-the-road-to-mainnet-2-bangkok))
 * **BeThere Integration:** All future events now use [BeThere](https://bethere.solana-thailand.workers.dev/) — a deposit-backed, on-chain event platform.
 * **Discord Integration:** Automated role-syncing based on GitHub contribution history and Rank.
 * **Quest Expansion:** Introduction of Level 2+ specialized tracks (DeFi, Gaming, Infrastructure).
