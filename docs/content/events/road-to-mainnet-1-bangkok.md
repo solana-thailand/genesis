@@ -45,7 +45,8 @@ speakers = [
 | Speaker | Topic | Slides |
 |---------|-------|--------|
 | Katopz | Rust, AI & Gaming (Ep. 2) | [Google Slides](https://docs.google.com/presentation/d/1HikZEH_mt31sbV93ps-1EiQEJGO6v7RuXT5a4QsRhds/edit?usp=sharing) |
-| Golf | NFT Engine Workshop | [Google Slides](https://docs.google.com/presentation/d/e/2PACX-1vS-t310yXERTs3HeZ1bwGK_i4rSRa3fYdN6899g1YO2e81kOWs8EJ4iRy36d3iiELYuyTYMjS3--Fdd/pub?start=false&loop=false&delayms=3000) |
+| Golf | NFT Engine Workshop | _Slides being republished_ |
+<!-- TODO(need-to-fix): Golf's slides returned 410 Gone. Old URL was https://docs.google.com/presentation/d/e/2PACX-1vS-t310yXERTs3HeZ1bwGK_i4rSRa3fYdN6899g1YO2e81kOWs8EJ4iRy36d3iiELYuyTYMjS3--Fdd/pub?start=false&loop=false&delayms=3000 — replace when re-published. -->
 | Chaerin | APAC Ecosystem Spotlight | [Google Drive](https://drive.google.com/file/d/15YBHFHpIROSTxOWRMzzipHpGDnhLkEWd/view?usp=sharing) |
 
 ---
