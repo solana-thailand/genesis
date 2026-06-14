@@ -157,6 +157,94 @@
         padding: 0.4rem 0.8rem;
     }
 
+    /* Section dividers for sessions + calendar */
+    .events-divider {
+        margin: 4rem 0 1.5rem;
+        text-align: center;
+    }
+    .events-divider h2 {
+        font-size: 1.75rem;
+        margin: 0 0 0.5rem;
+    }
+    .events-divider p {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        max-width: 720px;
+        margin: 0 auto;
+        line-height: 1.7;
+        font-weight: 300;
+    }
+    .events-divider .cta-group {
+        justify-content: center;
+        margin-top: 1.25rem;
+    }
+
+    /* Recurring online session cards */
+    .sessions-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.5rem;
+        padding-bottom: 2rem;
+    }
+    .session-card {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1.5rem;
+    }
+    .session-card .badge {
+        align-self: flex-start;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        background: rgba(20, 241, 149, 0.08);
+        border: 1px solid var(--solana-green);
+        color: var(--solana-green);
+    }
+    .session-card h3 {
+        font-size: 1.15rem;
+        color: #fff;
+        margin: 0.25rem 0 0;
+        line-height: 1.3;
+    }
+    .session-card .topic {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        line-height: 1.5;
+        flex: 1;
+        margin: 0;
+    }
+    .session-card .meta {
+        font-size: 0.8rem;
+        color: var(--text-dim);
+        font-family: var(--font-mono);
+        margin: 0;
+    }
+    .session-card .btn {
+        margin-top: 0.75rem;
+        text-align: center;
+    }
+
+    /* Calendar embed */
+    .calendar-frame {
+        position: relative;
+        width: 100%;
+        border: 1px solid var(--glass-border);
+        border-radius: 12px;
+        overflow: hidden;
+        background: var(--glass-bg);
+        margin-bottom: 4rem;
+    }
+    .calendar-frame iframe {
+        display: block;
+        width: 100%;
+        height: 600px;
+        border: 0;
+    }
+
     @media (max-width: 768px) {
         .events-hero {
             padding: 2rem 0 1rem;
@@ -208,6 +296,18 @@
             min-width: 70px;
             font-size: 0.75rem;
             padding: 0.35rem 0.7rem;
+        }
+
+        .events-divider h2 {
+            font-size: 1.4rem;
+        }
+
+        .sessions-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .calendar-frame iframe {
+            height: 450px;
         }
     }
 </style>
@@ -291,4 +391,65 @@ block #} {% endblock header %} {% block content %}
     </div>
     {% endfor %}
 </section>
-{% endblock content %}
+
+<!-- Recurring Online Sessions -->
+{% if section.extra.sessions %}
+<div class="events-divider">
+    <h2>Recurring Online Sessions</h2>
+    <p>
+        Weekly online sessions you can join from anywhere. No fixed date —
+        register on BeThere to claim a spot.
+    </p>
+</div>
+<section class="sessions-grid">
+    {% for s in section.extra.sessions %}
+    <div class="session-card glass-card">
+        <span class="badge">Online</span>
+        <h3>{{ s.title }}</h3>
+        <p class="topic">{{ s.topic }}</p>
+        <p class="meta">{{ s.date_label }}</p>
+        <a
+            href="{{ s.registration_url }}"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener"
+            >Register on BeThere</a
+        >
+    </div>
+    {% endfor %}
+</section>
+{% endif %}
+
+<!-- Full Calendar -->
+{% if config.extra.calendar_embed %}
+<div class="events-divider" id="calendar">
+    <h2>Full Calendar</h2>
+    <p>
+        Every Solana Thailand event — in-person meetups and online sessions — in
+        one calendar. Subscribe to stay in sync.
+    </p>
+    <div class="cta-group">
+        <a
+            href="{{ config.extra.calendar_embed }}"
+            class="btn btn-outline"
+            target="_blank"
+            rel="noopener"
+            >Subscribe (Google Calendar)</a
+        >
+        <a
+            href="https://bethere.solana-thailand.workers.dev/"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener"
+            >All Events on BeThere</a
+        >
+    </div>
+</div>
+<div class="calendar-frame">
+    <iframe
+        src="{{ config.extra.calendar_embed }}"
+        title="Solana Thailand Events Calendar"
+        loading="lazy"
+    ></iframe>
+</div>
+{% endif %} {% endblock content %}
