@@ -169,19 +169,6 @@ Solana Developer Thailand started as a passion project to bring together Rust de
 - Educational partnership with leading university
 - Onboarding the next generation of builders
 
-**April 26, 2026**
-**Road to Mainnet #1 — Rust, AI Agents & the Solana Ecosystem**
-- First session of the "Road to Mainnet" series, at ContributeDAO (CP Tower, Phaya Thai)
-- Four-speaker technical deep dive: Rust/AI/Gaming (Katopz), NFT with Metaplex (Golf), Ephemeral Rollups (Andy, Magicblock), APAC Ecosystem Spotlight (Chaerin, Solana Foundation)
-- Recordings: [Part 1](https://www.youtube.com/watch?v=vGhI2oxDKjI) / [Part 2 (Live)](https://www.youtube.com/watch?v=PEPDClvLngc)
-
-**May 24, 2026**
-**Road to Mainnet #2 — Rust EP3 & x402 Micropayments**
-- Second workshop in the Road to Mainnet series, at True Digital Park (TDPK)
-- First community event using [BeThere](https://bethere.solana-thailand.workers.dev/) deposit-backed registration (USDC escrow, refund-at-check-in, compressed NFT badges)
-- Two deep technical tracks: Rust EP3 (Katopz) and pay.sh — AI Agents with x402 Micropayments (Golf, ByteCat)
-- On-chain attendance metrics pending BeThere stats pull (see recap SOP 04)
-
 ---
 
 ## Join Our Community
