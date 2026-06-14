@@ -18,25 +18,24 @@ endblock header %} {% block content %}
 
 <section class="main-content">
     <div class="grid">
-        <!-- Upcoming May 2026 Event Card -->
-        <div class="glass-card event-highlight">
-            <span class="status-badge active" style="margin-bottom: 1rem"
-                >Upcoming: May 24</span
+        <!-- Completed May 2026 Event Card -->
+        <div class="glass-card event-highlight" style="opacity: 0.85">
+            <span
+                class="status-badge"
+                style="
+                    margin-bottom: 1rem;
+                    background: rgba(153, 69, 255, 0.08);
+                    border-color: var(--solana-purple);
+                    color: var(--solana-purple);
+                "
+                >Completed: May 24</span
             >
             <h3>Solana x AI Builders: The Road to Mainnet #2</h3>
             <p>
-                Rust EP3 & AI Agent Micropayments with x402. Deposit-backed
-                registration via BeThere at True Digital Park.
+                Rust EP3 & AI Agent Micropayments with x402 at True Digital
+                Park. Recordings coming soon.
             </p>
             <div style="display: flex; gap: 0.75rem; flex-wrap: wrap">
-                <a
-                    href="https://bethere.solana-thailand.workers.dev/e/solana-x-ai-builders-the-road-to-mainnet-2-bangkok"
-                    class="btn btn-primary"
-                    style="flex: 1; min-width: 140px; text-align: center"
-                    target="_blank"
-                    rel="noopener"
-                    >Register on BeThere</a
-                >
                 <a
                     href="{{ get_url(path='events/road-to-mainnet-2-bangkok') }}"
                     class="btn btn-outline"
@@ -44,8 +43,8 @@ endblock header %} {% block content %}
                         flex: 1;
                         min-width: 140px;
                         text-align: center;
-                        border-color: var(--solana-green);
-                        color: var(--solana-green);
+                        border-color: var(--solana-purple);
+                        color: var(--solana-purple);
                     "
                     >Event Details</a
                 >
