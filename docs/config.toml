@@ -26,3 +26,7 @@ theme = "github-dark"
 author = "Solana Thailand Core Team"
 github_repo = "https://github.com/solana-thailand/genesis"
 discord_url = "https://discord.gg/PGbUgNmsns"
+# Google Calendar embed URL for the weekly online series.
+# Format: https://calendar.google.com/calendar/embed?src=<CALENDAR_ID>&ctz=Asia/Bangkok
+# Leave empty to show a "calendar coming" placeholder on the online-events page.
+online_calendar_embed = ""
