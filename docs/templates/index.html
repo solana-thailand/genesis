@@ -18,6 +18,40 @@ endblock header %} {% block content %}
 
 <section class="main-content">
     <div class="grid">
+        <!-- Upcoming June 2026 Event Card -->
+        <div class="glass-card event-highlight">
+            <span class="status-badge active" style="margin-bottom: 1rem"
+                >Upcoming: Jun 20</span
+            >
+            <h3>Solana x AI Builders: The Road to Mainnet #3</h3>
+            <p>
+                Rust EP4 "Hello Latent Space" & more. Deposit-backed
+                registration via BeThere at True Digital Park.
+            </p>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap">
+                <a
+                    href="https://bethere.solana-thailand.workers.dev/e/solana-x-ai-builders-the-road-to-mainnet-3-bangkok"
+                    class="btn btn-primary"
+                    style="flex: 1; min-width: 140px; text-align: center"
+                    target="_blank"
+                    rel="noopener"
+                    >Register on BeThere</a
+                >
+                <a
+                    href="{{ get_url(path='events/road-to-mainnet-3-bangkok') }}"
+                    class="btn btn-outline"
+                    style="
+                        flex: 1;
+                        min-width: 140px;
+                        text-align: center;
+                        border-color: var(--solana-green);
+                        color: var(--solana-green);
+                    "
+                    >Event Details</a
+                >
+            </div>
+        </div>
+
         <!-- Completed May 2026 Event Card -->
         <div class="glass-card event-highlight" style="opacity: 0.85">
             <span
