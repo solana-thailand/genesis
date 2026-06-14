@@ -6,7 +6,7 @@ weight = 4
 
 [extra]
 hide_header = true
-event_status = "upcoming"
+event_status = "completed"
 subtitle = "Rust EP3 & AI Agent Micropayments with x402"
 event_date = "Sunday, 24 May 2026"
 event_time = "1:00 PM – 3:00 PM"
