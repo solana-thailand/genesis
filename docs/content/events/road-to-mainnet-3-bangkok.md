@@ -23,7 +23,7 @@ perks = [
 ]
 speakers = [
     { name = "Katopz", role = "Rust EP4: Hello Latent Space", role_type = "primary", org = "Solana Developer Thailand Leader", image = "katopz.jpg", social_links = { twitter = "https://x.com/katopz/" } },
-    { name = "Luke Dflow", role = "TBD", role_type = "secondary", org = "Dflow", image = "logo.png" }
+    { name = "Luke Cassady-Dorion", role = "DFlow Swap API Deep Dive", role_type = "secondary", org = "DFlow", image = "luke-dflow.jpg", social_links = { twitter = "https://x.com/spaceagente" }, description = "Leads developer relations at DFlow, a Solana DEX aggregator and the on-chain home for tokenized Kalshi prediction markets. His tech career stretches back to the early days of the web in the 1990s. He holds a degree in Thai Language Studies from Ramkhamhaeng University and has been based in Thailand since 2005." }
 ]
 +++
 
@@ -34,7 +34,7 @@ speakers = [
 Join the third workshop in the **"Road to Mainnet"** series. Two focused tracks:
 
 - **Rust EP4: Hello Latent Space** — โดย Katopz (Solana Developer Thailand Leader)
-- **TBD** — โดย Luke Dflow (Dflow)
+- **DFlow Swap API Deep Dive** — โดย Luke Cassady-Dorion (DFlow)
 
 ---
 
@@ -61,6 +61,7 @@ We're using **[BeThere](https://bethere.solana-thailand.workers.dev/)** — a de
 ### Highlights
 
 - **Rust EP4: Hello Latent Space**: เจาะลึก Rust EP4 — Level up from EP1, EP2 & EP3
+- **DFlow Swap API Deep Dive**: เจาะลึก Swap API บน DFlow DEX aggregator บน Solana
 - **On-chain Proof**: รับ compressed NFT Badge หลังเข้าร่วมงาน (ผ่านระบบ BeThere)
 - **Hands-on Workshop**: เตรียม Notebook มาด้วย!
 
@@ -70,7 +71,7 @@ We're using **[BeThere](https://bethere.solana-thailand.workers.dev/)** — a de
 
 - **13:00 – 13:10**: Opening & Welcome
 - **13:10 – 14:00**: Rust EP4: Hello Latent Space by Katopz
-- **14:00 – 14:50**: TBD by Luke Dflow
+- **14:00 – 14:50**: DFlow Swap API Deep Dive by Luke Cassady-Dorion
 - **14:50 – 15:00**: Q&A, Networking
 
 ---
