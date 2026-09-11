@@ -13,7 +13,7 @@ venue_name = "True Digital Park (TDPK)"
 venue_location = "Pegasus Building, 6th Floor, Meeting Room 6.11"
 poster_image = "road-to-mainnet-6-poster.png"
 registration_url = "https://bethere.solana-thailand.workers.dev/e/solana-x-ai-builders-the-road-to-mainnet-6-bangkok"
-registration_deadline = "21 onsite seats · 500 THB deposit, refunded at check-in"
+registration_deadline = "Free · join onsite or online · onsite seats held with a refundable deposit"
 perks = [
     "Hands-on Workshops",
     "Compressed NFT Badge (On-chain Proof of Attendance)",
@@ -31,10 +31,13 @@ speakers = [
 
 The sixth workshop in the **Road to Mainnet** series.
 
-Seats are held with a **500 THB deposit that is refunded when you check in** —
-the same mechanism used since #3. Across those events it moved attendance from
-**37% to 86%**, which is why we keep it: it is the difference between a room
-that is booked and a room that is full.
+**The event is free.** Joining online costs nothing. An onsite seat is held
+with a **deposit that comes back in full when you check in** — the exact amount
+is on the BeThere page, which is where it is actually configured.
+
+That hold is the same mechanism used since #3, and across those events it moved
+attendance from **37% to 86%**. It is the difference between a room that is
+booked and a room that is full.
 
 **Katopz** returns, as he has for every round of this series. A second speaker
 and both topics are still being settled — this page updates the moment they
