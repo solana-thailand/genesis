@@ -395,10 +395,10 @@ block #} {% endblock header %} {% block content %}
 <!-- Recurring Online Sessions -->
 {% if section.extra.sessions %}
 <div class="events-divider">
-    <h2>Recurring Online Sessions</h2>
+    <h2>Online Sessions</h2>
     <p>
-        Weekly online sessions you can join from anywhere. No fixed date —
-        register on BeThere to claim a spot.
+        Seven weekly sessions ran online between June and July 2026. Every one
+        was recorded and is public — watch any of them below.
     </p>
 </div>
 <section class="sessions-grid">
@@ -408,6 +408,15 @@ block #} {% endblock header %} {% block content %}
         <h3>{{ s.title }}</h3>
         <p class="topic">{{ s.topic }}</p>
         <p class="meta">{{ s.date_label }}</p>
+        {% if s.recording_url %}
+        <a
+            href="{{ s.recording_url }}"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener"
+            >Watch recording</a
+        >
+        {% elif s.registration_url %}
         <a
             href="{{ s.registration_url }}"
             class="btn btn-primary"
@@ -415,6 +424,7 @@ block #} {% endblock header %} {% block content %}
             rel="noopener"
             >Register on BeThere</a
         >
+        {% endif %}
     </div>
     {% endfor %}
 </section>

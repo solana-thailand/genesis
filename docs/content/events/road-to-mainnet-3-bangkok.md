@@ -6,13 +6,15 @@ weight = 3
 
 [extra]
 hide_header = true
-event_status = "upcoming"
+event_status = "completed"
+slides_url = "https://docs.google.com/presentation/d/1i8Nwxm13WKPhOjN0f0qJkrjoWIa_AZA_u41lMH3K438"
+recording_url = "https://www.youtube.com/watch?v=WYMjGDehtjs"
 subtitle = "Rust EP4: Hello Latent Space"
 event_date = "Saturday, 20 June 2026"
 event_time = "1:00 PM – 4:00 PM"
-countdown_target = "2026-06-20T13:00:00+07:00"
 venue_name = "True Digital Park (TDPK)"
 venue_location = "Building Pegasus, 6th Floor, Meeting Room 6.11"
+poster_image = "road-to-mainnet-3-recap.png"
 # TODO(verify): create the BeThere event with this exact slug so the link resolves.
 registration_url = "https://bethere.solana-thailand.workers.dev/e/solana-x-ai-builders-the-road-to-mainnet-3-bangkok"
 registration_deadline = "Limited Seats (18 Onsite)"

@@ -14,7 +14,7 @@ venue_name = "Room IT331, 3rd Floor"
 venue_location = "Faculty of ICT, Mahidol University"
 poster_image = "muict-poster-2026.jpg"
 recording_url = "https://www.youtube.com/watch?v=KHYwV8qtMys"
-slides_url = "https://docs.google.com/presentation/d/1b9R6_dKeOMj7tlQp4jtDC5DX_4FCI5I5bXqLPf0XmW8/edit"
+slides_url = "https://docs.google.com/presentation/d/1b9R6_dKeOMj7tlQp4jtDC5DX_4FCI5I5bXqLPf0XmW8"
 gallery_image = "muict-group-photo-2026.jpg"
 perks = [
     "Join for FREE + e-Certificate",

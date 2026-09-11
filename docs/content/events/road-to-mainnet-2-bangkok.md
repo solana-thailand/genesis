@@ -7,10 +7,12 @@ weight = 4
 [extra]
 hide_header = true
 event_status = "completed"
+registration_url = "https://bethere.solana-thailand.workers.dev/e/solana-x-ai-builders-the-road-to-mainnet-2-bangkok"
+slides_url = "https://docs.google.com/presentation/d/1z97g0Pkvz5m3zhmPQsWQAHpBqR5UrZ-4BlO6IINMW0I"
+recording_url = "https://www.youtube.com/watch?v=cVoItPytTJo"
 subtitle = "Rust EP3 & AI Agent Micropayments with x402"
 event_date = "Sunday, 24 May 2026"
 event_time = "1:00 PM – 3:00 PM"
-countdown_target = "2026-05-24T13:00:00+07:00"
 venue_name = "True Digital Park (TDPK)"
 venue_location = "Building Pegasus, 6th Floor, Meeting Room 6.11"
 poster_image = "road-to-mainnet-2-poster.jpg"
