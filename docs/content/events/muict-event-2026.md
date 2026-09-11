@@ -2,8 +2,7 @@
 title = "Modern Systems & AI Integration with Rust"
 description = "An exclusive seminar exploring high-performance systems and blockchain innovation at Mahidol ICT."
 template = "event.html"
-weight = 10
-
+date = 2026-01-28
 [extra]
 hide_header = true
 event_status = "completed"

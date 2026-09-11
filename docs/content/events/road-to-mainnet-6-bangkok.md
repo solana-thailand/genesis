@@ -2,8 +2,7 @@
 title = "Solana x AI Builders: The Road to Mainnet #6 (Bangkok)"
 description = "The sixth workshop in the Road to Mainnet series. Deposit-backed, refunded at check-in."
 template = "event.html"
-weight = 6
-
+date = 2026-09-27
 [extra]
 hide_header = true
 event_status = "upcoming"

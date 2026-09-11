@@ -2,8 +2,7 @@
 title = "Solana x AI Builders: The Road to Mainnet #3 (Bangkok)"
 description = "Rust EP4 'Hello Latent Space' — the third workshop in the Road to Mainnet series."
 template = "event.html"
-weight = 3
-
+date = 2026-06-20
 [extra]
 hide_header = true
 event_status = "completed"

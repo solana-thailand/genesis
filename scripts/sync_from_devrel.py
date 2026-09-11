@@ -42,6 +42,11 @@ MONTHS = {m: i for i, m in enumerate(
 OWNED = ("event_status", "recording_url", "slides_url",
          "countdown_target", "registration_url")
 
+# `date` is owned too, but lives at the top level of the front matter rather
+# than under [extra], so it is handled separately. The events index sorts on
+# it: weights had drifted to 3, 4, 4, 5, 6, 10 and 55 across seven pages and
+# ordered the list at random.
+
 
 def page_date(text: str) -> date | None:
     """'Sunday, 26 April 2026' -> date(2026, 4, 26)."""
@@ -105,6 +110,21 @@ def set_key(text: str, key: str, value: str | None) -> tuple[str, str | None]:
     return text[:at] + line + text[at:], f"{key}: + {value}"
 
 
+def set_top_key(text: str, key: str, value: str) -> tuple[str, str | None]:
+    """Set a top-level TOML key, above the [extra] table."""
+    cur = re.search(rf'^{key}\s*=\s*(\S+)\s*$', text, re.M)
+    if cur and cur.group(1) == value:
+        return text, None
+    if cur:
+        return (text[:cur.start()] + f"{key} = {value}" + text[cur.end():],
+                f"{key}: {cur.group(1)} -> {value}")
+    anchor = re.search(r'^template\s*=\s*"[^"]*"\s*$\n', text, re.M)
+    if not anchor:
+        return text, None
+    return (text[:anchor.end()] + f"{key} = {value}\n" + text[anchor.end():],
+            f"{key}: + {value}")
+
+
 def main() -> int:
     apply = "--apply" in sys.argv
     events = load_events()
@@ -125,6 +145,9 @@ def main() -> int:
             continue
         seen.add(d)
         out, notes = text, []
+        out, note = set_top_key(out, "date", d.isoformat())
+        if note:
+            notes.append(note)
         for key in OWNED:
             out, note = set_key(out, key, desired(e)[key])
             if note:

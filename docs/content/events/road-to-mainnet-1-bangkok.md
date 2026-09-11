@@ -2,8 +2,7 @@
 title = "Solana x AI Builders: The Road to Mainnet #1 (Bangkok)"
 description = "Deep Dive into Rust, AI Agents, and the Solana Ecosystem. The first series for AI and Web3 builders preparing for Mainnet."
 template = "event.html"
-weight = 5
-
+date = 2026-04-26
 [extra]
 hide_header = true
 event_status = "completed"

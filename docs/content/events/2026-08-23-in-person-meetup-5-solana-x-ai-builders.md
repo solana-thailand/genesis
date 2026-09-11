@@ -2,8 +2,7 @@
 title = "Solana x AI Builders: The Road to Mainnet #5 (Bangkok)"
 description = "In-person Meetup #5 for Solana and AI builders. Featuring Rust Ruliology in Latent Space by Katopz and Colosseum Hackathon Technical Guide & Live Feedback by Gui Bibeau."
 template = "event.html"
-weight = 55
-
+date = 2026-08-23
 [extra]
 hide_header = true
 event_status = "completed"

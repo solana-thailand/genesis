@@ -2,8 +2,7 @@
 title = "Solana x AI Builders: The Road to Mainnet #2 (Bangkok)"
 description = "Rust EP3 & AI Agent Micropayments with x402 — The second workshop in the Road to Mainnet series."
 template = "event.html"
-weight = 4
-
+date = 2026-05-24
 [extra]
 hide_header = true
 event_status = "completed"

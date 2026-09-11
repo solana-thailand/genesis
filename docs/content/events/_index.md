@@ -1,7 +1,7 @@
 +++
 title = "Events"
 description = "All Solana Thailand events — in-person meetups, recurring online builder sessions, and the full calendar."
-sort_by = "weight"
+sort_by = "date"
 template = "events.html"
 weight = 0
 

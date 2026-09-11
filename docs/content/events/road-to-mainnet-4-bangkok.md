@@ -2,8 +2,7 @@
 title = "Solana x AI Builders: The Road to Mainnet #4 (Bangkok)"
 description = "Hello Neuro Symbolic, and payment protocols for the AI agent economy — the fourth workshop in the Road to Mainnet series."
 template = "event.html"
-weight = 4
-
+date = 2026-07-19
 [extra]
 hide_header = true
 event_status = "completed"
