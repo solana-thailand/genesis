@@ -7,10 +7,11 @@ weight = 5
 [extra]
 hide_header = true
 event_status = "completed"
+registration_url = "https://bethere.solana-thailand.workers.dev/e/solana-x-ai-builders-the-road-to-mainnet-1-bangkok"
+slides_url = "https://docs.google.com/presentation/d/1HikZEH_mt31sbV93ps-1EiQEJGO6v7RuXT5a4QsRhds"
 subtitle = "Deep Dive into Rust, AI Agents, and the Solana Ecosystem"
 event_date = "Sunday, 26 April 2026"
 event_time = "9:30 AM – 1:00 PM"
-countdown_target = "2026-04-26T09:30:00+07:00"
 venue_name = "ContributeDAO (CDAO), 3rd Floor"
 venue_location = "CP Tower, Phaya Thai (BTS Phaya Thai / Airport Link)"
 poster_image = "road-to-mainnet-1-poster.jpg"
