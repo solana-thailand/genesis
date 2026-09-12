@@ -20,7 +20,8 @@ perks = [
     "Deposit Refunded on Check-in",
 ]
 speakers = [
-    { name = "Katopz", role = "Topic to be announced", role_type = "primary", org = "Rustaceans", image = "katopz.jpg", social_links = { twitter = "https://x.com/katopz/" } },
+    { name = "Katopz", role = "Rust on Solana: On-Chain Programs & Agent State (EP7)", role_type = "primary", org = "Rustaceans", image = "katopz.jpg", social_links = { twitter = "https://x.com/katopz/" } },
+    { name = "Ozone", role = "Autonomous Video Agents: ComfyUI & Rust on Solana", role_type = "secondary", org = "Solana Thailand DevRel" },
 ]
 +++
 
@@ -39,9 +40,15 @@ That hold is the same mechanism used since #3, and across those events it moved
 attendance from **37% to 86%**. It is the difference between a room that is
 booked and a room that is full.
 
-**Katopz** returns, as he has for every round of this series. A second speaker
-and both topics are still being settled — this page updates the moment they
-are, and anyone already registered on BeThere hears about it first.
+Two sessions, both confirmed:
+
+- **Rust on Solana: On-Chain Programs & Agent State (EP7)** — Katopz
+  (Rustaceans), the seventh instalment of the Rust series that has run through
+  every Road to Mainnet event.
+- **Autonomous Video Agents: Giving Faces & Voices to On-Chain AI with ComfyUI
+  & Rust** — Ozone (Solana Thailand DevRel). Connecting on-chain state to
+  generative video in real time, with ComfyUI and Whisper running locally on
+  Apple Silicon — no API bills — and Rust enforcing the parameter bounds.
 
 ---
 
