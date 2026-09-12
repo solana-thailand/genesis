@@ -163,6 +163,9 @@ inside the content block #} {% endblock header %} {% block content %}
                 {{ page.extra.venue_name }}<br />{{ page.extra.venue_location |
                 default(value="") }}
             </p>
+            {% if page.extra.venue_credit %}
+            <p class="venue-credit">{{ page.extra.venue_credit }}</p>
+            {% endif %}
         </div>
         {% endif %} {% if page.extra.perks %}
         <div class="glass-card">
@@ -455,6 +458,13 @@ inside the content block #} {% endblock header %} {% block content %}
     }
 
     /* Speakers Section - Premium Profile */
+    .venue-credit {
+        margin-top: 0.6rem;
+        font-size: 0.82rem;
+        letter-spacing: 0.04em;
+        color: #14f195;
+    }
+
     .speakers-section {
         margin: 8rem 0;
         text-align: center;
