@@ -9,11 +9,12 @@ event_status = "upcoming"
 event_date = "Sunday, 27 September 2026"
 event_time = "1:00 PM – 4:00 PM"
 countdown_target = "2026-09-27T13:00:00+07:00"
-venue_name = "True Digital Park (TDPK)"
-venue_location = "Pegasus Building, 6th Floor, Meeting Room 6.11"
-poster_image = "road-to-mainnet-6-poster.png"
+venue_name = "FabCafe Bangkok"
+venue_location = "3F, Rear Wing · Bangkok General Post Office, Bang Rak"
+poster_image = "road-to-mainnet-6-poster.jpg"
 registration_url = "https://bethere.solana-thailand.workers.dev/e/solana-x-ai-builders-the-road-to-mainnet-6-bangkok"
 registration_deadline = "Free · join onsite or online · onsite seats held with a refundable deposit"
+venue_credit = "Venue sponsored by FabCafe Bangkok"
 perks = [
     "Hands-on Workshops",
     "Compressed NFT Badge (On-chain Proof of Attendance)",
@@ -21,14 +22,15 @@ perks = [
 ]
 speakers = [
     { name = "Katopz", role = "Rust on Solana: On-Chain Programs & Agent State (EP7)", role_type = "primary", org = "Rustaceans", image = "katopz.jpg", social_links = { twitter = "https://x.com/katopz/" } },
-    { name = "Ozone", role = "Autonomous Video Agents: ComfyUI & Rust on Solana", role_type = "secondary", org = "Solana Thailand DevRel" },
+    { name = "Ozone", role = "No-Shows and No Budget: BeThere Deposits, and a Local ComfyUI Poster Pipeline", role_type = "primary", org = "Solana Thailand DevRel", image = "ozone.jpg" },
 ]
 +++
 
 ### About This Event
 
-ซีรีส์ **"Road to Mainnet"** รอบที่ 6 — จัดที่ True Digital Park เหมือนเดิม
-รับ **21 ที่นั่งหน้างาน** และเข้าร่วมออนไลน์ได้
+ซีรีส์ **"Road to Mainnet"** รอบที่ 6 — ย้ายมาจัดที่ **FabCafe Bangkok**
+(ชั้น 3 ปีกหลัง อาคารไปรษณีย์กลาง บางรัก) ซึ่งสนับสนุนสถานที่ให้รอบนี้
+รับ **40 ที่นั่งหน้างาน** และเข้าร่วมออนไลน์ได้
 
 The sixth workshop in the **Road to Mainnet** series.
 
@@ -45,10 +47,12 @@ Two sessions, both confirmed:
 - **Rust on Solana: On-Chain Programs & Agent State (EP7)** — Katopz
   (Rustaceans), the seventh instalment of the Rust series that has run through
   every Road to Mainnet event.
-- **Autonomous Video Agents: Giving Faces & Voices to On-Chain AI with ComfyUI
-  & Rust** — Ozone (Solana Thailand DevRel). Connecting on-chain state to
-  generative video in real time, with ComfyUI and Whisper running locally on
-  Apple Silicon — no API bills — and Rust enforcing the parameter bounds.
+- **No-Shows and No Budget: BeThere Deposits, and a Local ComfyUI Poster
+  Pipeline** — Ozone (Solana Thailand DevRel). Two problems, two tools built
+  rather than bought. First half: BeThere, the deposit-backed check-in system
+  behind this page's own registration — what it holds, what it proved across
+  51 deposits, and what it still cannot do. Second half: the local ComfyUI
+  pipeline that generated the speaker posters, free and on one laptop.
 
 ---
 
